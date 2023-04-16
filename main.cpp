@@ -3,7 +3,8 @@
 #include <vector>
 #include <fstream>
 #include <array>
-#include <variant>
+
+#include "table.cpp"
 using namespace std;
 
 void outputHelpMessage()
@@ -12,17 +13,10 @@ void outputHelpMessage()
 };
 
 // Struct to store a single column, its data and header
-struct Column
-{
-    string header;
-    vector<variant<float, string>> values;
-};
+
 
 // Struct to store table
-struct Table
-{
-    vector<Column> columns;
-};
+
 
 vector<string> splitString(string str)
 {
@@ -49,14 +43,34 @@ vector<string> splitString(string str)
 
 Table parseFile(vector<string> lines)
 {
-    Table table;
+    int columns = stoi(lines[0]), rows = stoi(lines[1]);
+    Table table(rows, columns);
+    
+    vector<string> headers = splitString(lines[2]);
+
+
+    
+    vector<vector<string>> rawValues;
+    for(int x = 4; x < rows + 4; x++) {
+        string line = lines[x];
+        // cout << x - 3 << "=" << line << endl;
+        vector<string> row = splitString(line);
+        rawValues.push_back(row);
+    }
+    for(int x = 0; x < columns; x++) {
+        string header = headers[x];
+        vector<string> &newCol = table.createNewColumn(header);
+        for (int y = 0; y < rows; y++){
+            cout << newCol[0][1] << endl;
+        }
+    }
+
     return table;
 };
 
 // Function to load file from input path and returns a vector including vector including all the data
 Table loadFile(string path)
 {
-    Table table;
     fstream file;
     file.open("file.txt", ios::in);
 
@@ -73,7 +87,8 @@ Table loadFile(string path)
             lines.push_back(line);
         };
     };
-    return parseFile(lines);
+    Table table = parseFile(lines);
+    return table;
 };
 
 string convertArrayToCSV(vector<int> array)
