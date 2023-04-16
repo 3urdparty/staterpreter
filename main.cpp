@@ -5,40 +5,14 @@
 #include <array>
 #include "textformat.cpp"
 #include "table.cpp"
+#include "prompt.cpp"
+#include "utilities.cpp"
 using namespace std;
-
-void outputHelpMessage()
-{
-    cout << "\nCore commands\n";
-    cout << setw(20) << setfill('=') << "\n";
-};
 
 // Struct to store a single column, its data and header
 
 // Struct to store table
 
-vector<string> splitString(string str)
-{
-    vector<string> output;
-    string buffer = "";
-    for (int x = 0; x <= str.length(); x++)
-    {
-        if (str[x] == ',')
-        {
-            output.push_back(buffer);
-            buffer = "";
-        }
-        else if (str[x] == ' ')
-        {
-        }
-        else
-        {
-            buffer += str[x];
-        }
-    }
-    output.push_back(buffer);
-    return output;
-}
 
 Table parseFile(vector<string> lines)
 {
