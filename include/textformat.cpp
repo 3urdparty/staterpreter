@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cstdio>
+#include "textformat.hpp"
 using namespace std;
 
 namespace fg
@@ -31,7 +32,7 @@ namespace bg
 
 string clearfmt = "\x1b[0m";
 string bold = "\e[1m";
-string colorfmt(int fgcolor, int bgcolor = 0)
+string colorfmt(int fgcolor, int bgcolor)
 {
     string fmt;
     if (bgcolor == 0)

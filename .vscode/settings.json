@@ -1,6 +1,11 @@
 {
     "files.associations": {
         "vector": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "iosfwd": "cpp",
+        "array": "cpp",
+        "string_view": "cpp",
+        "fstream": "cpp",
+        "__locale": "cpp"
     }
 }

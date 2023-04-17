@@ -1,5 +1,5 @@
 #include <iostream>
-#include "table.h"
+#include "table.hpp"
 #include <variant>
 #include <iomanip>
 #include <sys/ioctl.h>
@@ -7,33 +7,8 @@
 #include <unistd.h>
 #include <tuple>
 #include <utility>
-using namespace stat;
 using namespace std;
 
-Column::Column(string h, Datatype t)
-{
-    header = h;
-    type = t;
-};
-
-Column::~Column(){
-
-};
-
-void Column::setValueAt(unsigned int rowNo, float value)
-{
-    rows.push_back(to_string(value));
-};
-
-string Column::getHeader()
-{
-    return header;
-};
-
-string Column::getValueAt(unsigned int rowNo)
-{
-    return rows[rowNo];
-}
 
 Table::Table(unsigned int col, unsigned int row)
 {
@@ -126,7 +101,7 @@ void Table::displayTable()
 
 
     cout << endl;
-    for (int x = 0; x < 5; x++)
+    for (int x = 0; x < columns; x++)
     {
         cout  << "\e[1m\x1b[32m" << data[x].getHeader() << left << setw(8) << setfill(' ') << "\t" << "\e[0m\x1b[0m" ;
     };
@@ -143,3 +118,20 @@ void Table::displayTable()
         cout << endl;
     };
 };
+
+string Table::convertToCSV(){
+    string csv = "";
+    csv += to_string(columns);
+    csv += to_string(rows);
+    for (int x = 0; x < columns; x++) {
+        csv += data[x].getHeader();
+        cout << data[x].getHeader();
+    }
+    for (int x = 0; x < columns; x++) {
+        for (int y = 0; y < rows; y++) {
+            csv += data[x].getValueAt(y);
+        }
+    };
+    cout << csv << endl;
+    return R"()";
+}

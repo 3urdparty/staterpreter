@@ -1,6 +1,6 @@
 #include<string>
 #include<vector>
-#include "utilities.h"
+#include "utilities.hpp"
 using namespace std;
 
 vector<string> splitString(string str)
@@ -25,3 +25,8 @@ vector<string> splitString(string str)
     output.push_back(buffer);
     return output;
 }
+
+bool cmpstr(string str1, string str2)
+{
+    return !strcmp(str1.c_str(), str2.c_str());
+};
