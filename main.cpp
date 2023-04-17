@@ -61,6 +61,8 @@ int main(int argc, char const *argv[]) {
           varianceCMD(args, currentTable, tableLoaded);
         } else if (cmpstr(args[0], "stdv")) {
           stdvCMD(args, currentTable, tableLoaded);
+        } else if (cmpstr(args[0], "add")) {
+          addCMD(args, currentTable, tableLoaded);
         } else {
           cout << "Command not recognized. Enter 'help' for a list of commands."
                << endl;
