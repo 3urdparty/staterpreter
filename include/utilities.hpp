@@ -15,7 +15,7 @@ float getMin(vector<float>& values);
 float getMax(vector<float>& values);
 
 vector<float> convertStrToFloats(vector<string>& strings);
-float calculateMedian(vector<float>& values);
+float calculateMedian(vector<float> values);
 float calculateSum(vector<float>& values);
 float calculateMean(vector<float>& values);
 float calculateVariance(vector<float>& values);

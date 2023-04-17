@@ -28,7 +28,7 @@ void varianceCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
             float variance = col.getVariance();
             string columnHeader = col.getHeader();
 
-            cout << fixed << setprecision(0) << "The Variance for column "
+            cout << fixed << setprecision(3) << showpoint << "The Variance for column "
                  << colorfmt(fg::magenta) << colHeader << clearfmt << " is "
                  << colorfmt(fg::cyan) << bold << variance << clearfmt << endl;
           }

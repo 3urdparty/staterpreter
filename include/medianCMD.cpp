@@ -12,7 +12,7 @@ void medianCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
   if (tableLoaded) {
     if (args.size() == 1) {
       float median = currentTable.getMedian();
-      cout << fixed << setprecision(0) << "The Median of the table is "
+      cout << fixed << setprecision(2) << showpoint << "The Median of the table is "
            << colorfmt(fg::cyan) << bold << median << clearfmt << endl;
     } else if (args.size() == 2) {
       string colHeader = args[1];

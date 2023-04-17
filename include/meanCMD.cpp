@@ -13,7 +13,8 @@ void meanCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
     if (args.size() == 1) {
       float mean = currentTable.getMean();
       cout << fixed << setprecision(0) << "The Mean of the table is "
-           << colorfmt(fg::cyan) << bold << mean << clearfmt << endl;
+           << colorfmt(fg::cyan) << setprecision(2) << fixed << showpoint
+           << bold << mean << clearfmt << endl;
     } else if (args.size() == 2) {
       string colHeader = args[1];
       if (currentTable.columnExists(colHeader)) {
@@ -28,9 +29,9 @@ void meanCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
             float mean = col.getMean();
             string columnHeader = col.getHeader();
 
-            cout << fixed << setprecision(0) << "The Mean value for column "
-                 << colorfmt(fg::magenta) << colHeader << clearfmt << " is "
-                 << colorfmt(fg::cyan) << bold << mean << clearfmt << endl;
+            cout << "The Mean value for column " << colorfmt(fg::magenta)
+                 << colHeader << clearfmt << " is " << colorfmt(fg::cyan)
+                 << bold  << setprecision(2) << fixed << showpoint << mean << clearfmt << endl;
           }
         } else {
           cout << "Sorry, column " << colorfmt(fg::magenta) << args[1]

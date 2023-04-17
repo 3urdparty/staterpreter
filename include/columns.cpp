@@ -81,7 +81,7 @@ float Column::getMedian() {
 };
 float Column::getMean() {
   vector<float> values = convertStrToFloats(rows);
-  return calculateMedian(values);
+  return calculateMean(values);
 };
 float Column::getVariance() {
   vector<float> values = convertStrToFloats(rows);

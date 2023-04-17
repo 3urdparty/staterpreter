@@ -12,7 +12,7 @@ void stdvCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
   if (tableLoaded) {
     if (args.size() == 1) {
       float stdv = currentTable.getStdDeviation();
-      cout << fixed << setprecision(0)
+      cout << fixed << setprecision(2) << showpoint
            << "The Standard deviation of the table is " << colorfmt(fg::cyan)
            << bold << stdv << clearfmt << endl;
     } else if (args.size() == 2) {
@@ -29,7 +29,7 @@ void stdvCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
             float stdv = col.getStdDeviation();
             string columnHeader = col.getHeader();
 
-            cout << fixed << setprecision(0)
+            cout << fixed << setprecision(3) << showpoint
                  << "The Standard deviation for column "
                  << colorfmt(fg::magenta) << colHeader << clearfmt << " is "
                  << colorfmt(fg::cyan) << bold << stdv << clearfmt << endl;

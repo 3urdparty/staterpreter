@@ -72,18 +72,22 @@ vector<float> convertStrToFloats(vector<string>& strings) {
   return values;
 }
 
-float calculateMedian(vector<float>& values) {
+float calculateMedian(vector<float> values) {
   int n = values.size();
   float median;
+  sort(values.begin(), values.end());
+
   if (n % 2 == 0) {
-    median = (values[n / 2] + values[(n / 2) + 1]) / 2;
+    cout << n / 2 << endl;
+    median = (values[n / 2 - 1] + values[(n / 2)]) / 2.0f;
+    cout << "even " << values[(n / 2) + 1] << endl;
   } else {
-    median = values[(n + 1) / 2];
+    median = values[n / 2];
   }
   return median;
 };
 float calculateMean(vector<float>& values) {
-  return calculateSum(values) / values.size();
+  return calculateSum(values) / float(values.size());
 };
 
 float calculateSum(vector<float>& values) {
@@ -97,10 +101,12 @@ float calculateSum(vector<float>& values) {
 float calculateVariance(vector<float>& values) {
   // σ2 = ∑ (x − x̅)^2 / n
   float sum;
+  float mean = calculateMean(values);
   for (int n = 0; n < values.size(); n++) {
-    sum += pow((values[n] - abs(values[n])), 2);
+    cout << values[n] << mean << endl;
+    sum += pow((values[n] - mean), 2);
   };
-  return sum / 2;
+  return sum / 2.f;
 };
 
 float calculateStandardDeviation(vector<float>& values) {
