@@ -18,5 +18,6 @@ void meanCMD(vector<string>& args, Table& currentTable, bool& tableLoaded);
 void varianceCMD(vector<string>& args, Table& currentTable, bool& tableLoaded);
 void stdvCMD(vector<string>& args, Table& currentTable, bool& tableLoaded);
 void addCMD(vector<string>& args, Table& currentTable, bool& tableLoaded);
+void subCMD(vector<string>& args, Table& currentTable, bool& tableLoaded);
 
 #endif

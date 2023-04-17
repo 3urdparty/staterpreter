@@ -63,7 +63,10 @@ int main(int argc, char const *argv[]) {
           stdvCMD(args, currentTable, tableLoaded);
         } else if (cmpstr(args[0], "add")) {
           addCMD(args, currentTable, tableLoaded);
-        } else {
+        } else if (cmpstr(args[0], "sub")) {
+          subCMD(args, currentTable, tableLoaded);
+        } 
+        else {
           cout << "Command not recognized. Enter 'help' for a list of commands."
                << endl;
         };
