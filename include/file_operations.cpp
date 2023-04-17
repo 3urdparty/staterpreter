@@ -1,88 +1,34 @@
-#include <vector>
-#include <string>
 #include <fstream>
 #include <iostream>
-using namespace std;
+#include <string>
+#include <vector>
 
-#include "table.hpp"
-#include "prompt.hpp"
+using namespace std;
+#include "file_operations.hpp"
+#include "textformat.hpp"
 #include "utilities.hpp"
 // using namespace stat;
 
-Table parseCSVIntoTable(vector<string> lines)
-{   
-    int columns = stoi(lines[0]), rows = stoi(lines[1]);
-    Table table(0,0); // Create new table object
+// Function to load file from input path and returns a vector including vector
+// including all the data
+void readLines(string& path, vector<string>& content) {
+  fstream file;
+  file.open(path, ios::in);
 
-    vector<string> headers = splitString(lines[2]); // Split the line containing header names and storing into vector headers
-
-    vector<vector<string>> rawValues;
-    for (int x = 4; x < rows + 4; x++)
-    {
-        string line = lines[x];
-        vector<string> row = splitString(line);
-        rawValues.push_back(row);
-    }
-
-
-    for (int x = 0; x < size(rawValues); x++)
-    {
-        table.addNewNumColumn(headers[x]);
-        for (int y = 0; y < size(rawValues[x]) ; y++)
-        {
-        // cout << x << ", " << y << endl;
-        cout << rawValues[x][y] << "\t";
-            table.insertNumberIntoColumn(headers[x], x, rawValues[x][y]);
-        }
-        cout << endl;
-    }
-    return table;
-};
-
-// Function to load file from input path and returns a vector including vector including all the data
-vector<string> loadFile(string path)
-{
-    fstream file;
-    file.open("file.txt", ios::in);
-
-    vector<string> lines;
-    if (!file)
-    {
-        cout << "File not found";
-    }
-    else
-    {
-        string line;
-        while (getline(file, line))
-        { // read data from file object and put it into string.
-            lines.push_back(line);
-        };
+  if (!file) {
+    cout << "File not found";
+  } else {
+    string line;
+    while (getline(
+        file, line)) {  // read data from file object and put it into string.
+      content.push_back(line);
     };
-
-    return lines;
+  };
 };
 
-
-string convertArrayToCSV(Table table)
-{
-    string csv = table.convertToCSV();
-    return csv;
-}
-
-void storeFile(string filename, string content)
-{
-    fstream file;
-    file.open(filename, ios::out);
-    if (!file)
-    {
-        cout << "File not created!";
-    }
-    else
-    {
-        cout << "File created successfully!";
-        file << content;
-        file.close();
-    }
+bool fileExists(string& path) {
+  ifstream f(path.c_str());
+  return f.good();
 };
 
 void cloneFile(){
@@ -91,4 +37,30 @@ void cloneFile(){
 
 void generateHTMLFile(){
 
+};
+
+void parseCSV(vector<string>& content, vector<vector<string>>& csv) {
+  for (string line : content) {
+    vector<string> csv_entry = splitString(line);
+    csv.push_back(csv_entry);
+  }
+};
+
+void writeLinesToFile(string& path, vector<string>& lines) {
+  fstream file;
+  file.open(path, ios::out);
+  if (!file) {
+    cout << "File " << colorfmt(fg::yellow) << path << clearfmt << " not found";
+  } else {
+    for (string line : lines) {
+      // string line = entry;
+      file << line.c_str() << endl;
+    };
+  }
+};
+
+void copyFile(string& path1, string& path2) {
+  vector<string> lines;
+  readLines(path1, lines);
+  writeLinesToFile(path2, lines);
 };

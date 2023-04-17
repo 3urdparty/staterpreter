@@ -1,137 +1,286 @@
-#include <iostream>
 #include "table.hpp"
-#include <variant>
+
 #include <iomanip>
-#include <sys/ioctl.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <tuple>
-#include <utility>
+#include <iostream>
+#include <variant>
+
+#include "textformat.hpp"
+#include "utilities.hpp"
 using namespace std;
 
-
-Table::Table(unsigned int col, unsigned int row)
-{
-    columns = col;
-    rows = row;
+Table::Table(){};
+Table::Table(unsigned int col, unsigned int row) {
+  columns = col;
+  rows = row;
 };
 
 Table::~Table(){};
 
-string Table::getRawValueAt(unsigned int x, unsigned int y)
-{
-    Column ncol = data[x];
-    // string rawValue = ncol.getValueAt(y);
-    string rawValue = "";
-    return rawValue;
+string Table::getValueAt(int colIndex, unsigned int rowNo) {
+  Column col = operator[](colIndex);
+  return col.getValueAt(rowNo);
 };
 
-/// @brief Function that gets the index number of the column with the header 'header' from the columnindex
-/// @param header
-/// @return column_index
-int Table::getColumnIndexFromHeader(string header)
-{
-    for (pair<string, int> entry : columnIndex)
-    {
-        if (entry.first == header)
-        {
-            return entry.second;
-        };
-    };
-    return -1;
+string Table::getValueAt(string header, unsigned int rowNo) {
+  Column col = getColumnByHeader(header);
+  return col.getValueAt(rowNo);
 };
 
-/// @brief Method that adds a new column to the table, and adds a record to the columnIndex
+/// @brief Method that adds a new column to the table, and adds a record to the
+/// columnIndex
 /// @param header
-void Table::addNewNumColumn(string header)
-{
-    Column newCol(header, flt);
-
-    pair<string, int> newColIndex(header, size(columnIndex));
-    columnIndex.push_back(newColIndex);
-    data.push_back(newCol);
+void Table::addColumn(string header, ValueType dttype) {
+  Column newCol(header, flt);
+  int newIndex = data.size();
+  newCol.setIndex(newIndex);
+  newCol.setValueType(dttype);
+  data.push_back(newCol);
 };
 
 /// @brief Removes column from table, including its data and their records
 /// @param header
-void Table::removeColumn(string header)
-{
-    int i = getColumnIndexFromHeader(header);
+void Table::removeColumn(string header){
+    // int i = getColumnIndexFromHeader(header);
     // data.erase(i);
     // columnIndex.erase(columnIndex);
 };
 
-void Table::insertNumberIntoColumn(string header, unsigned int rowNo, string value)
-{
-    int index = getColumnIndexFromHeader(header);
-    float num = stod(value);
+Column &Table::operator[](size_t i) { return data[i]; };
 
-    data[index].setValueAt(rowNo, num);
+Column Table::operator[](size_t i) const {
+  const Column col = data[i];
+  return col;
 };
 
-void Table::insertStringIntoColumn(string header, unsigned int rowNo, string value){
-    // int index = getColumnIndexFromHeader(header);
-    // data[index].set(rowNo, num);
-};
-
-float Table::getNumValueAt(string header, unsigned int rowNo)
-{
-    int colNo = getColumnIndexFromHeader(header);
-    string rawValue = getRawValueAt(colNo, rowNo);
-    return stof(rawValue);
-};
-
-string Table::getStrValueAt(string header, unsigned int rowNo)
-{
-    int colNo = getColumnIndexFromHeader(header);
-    string rawValue = getRawValueAt(colNo, rowNo);
-    return rawValue;
-};
-
-tuple<int, int> getTerminalDimensions()
-{
-    struct winsize w;
-    ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
-    return {w.ws_col, w.ws_row};
-};
-
-void Table::displayTable()
-{
-    auto [w, h] = getTerminalDimensions();
-
-
-    cout << endl;
-    for (int x = 0; x < columns; x++)
-    {
-        cout  << "\e[1m\x1b[32m" << data[x].getHeader() << left << setw(8) << setfill(' ') << "\t" << "\e[0m\x1b[0m" ;
+bool Table::columnExists(string header) {
+  for (int i = 0; i <= columns; i++) {
+    if (cmpstr(operator[](i).getHeader(), header)) {
+      return true;
     };
-  
-    cout << "" << endl;
-    for (int y = 0; y < rows; y++)
-    {
-        for (int x = 0; x < columns; x++)
-        {
-            cout << setw(8) << setfill(' ')
-                 << setprecision(0) << left << fixed
-                 << stof(data[x].getValueAt(y)) << "\t";
-        }
-        cout << endl;
-    };
-};
-
-string Table::convertToCSV(){
-    string csv = "";
-    csv += to_string(columns);
-    csv += to_string(rows);
-    for (int x = 0; x < columns; x++) {
-        csv += data[x].getHeader();
-        cout << data[x].getHeader();
-    }
-    for (int x = 0; x < columns; x++) {
-        for (int y = 0; y < rows; y++) {
-            csv += data[x].getValueAt(y);
-        }
-    };
-    cout << csv << endl;
-    return R"()";
+  };
+  return false;
 }
+
+Column &Table::getColumnByHeader(string header) {
+  for (int i = 0; i <= data.size(); i++) {
+    if (cmpstr(operator[](i).getHeader(), header)) {
+      return operator[](i);
+    };
+  };
+  return operator[](0);
+};
+
+void Table::displayTable() const {
+  auto [w, h] = getTerminalDimensions();
+
+  cout << endl;
+  cout << "+" << setfill('=') << setw(16 * columns - 1) << "" << setw(1)
+       << setfill(' ') << "+" << endl;
+
+  cout << "|";
+
+  for (int x = 0; x < columns; x++) {
+    Column col = operator[](x);
+    cout << bold << colorfmt(fg::green) << col.getHeader() << left << setw(8)
+         << "\t"
+         << "\t" << clearfmt;
+  };
+  cout << "|" << endl;
+  for (int y = 0; y < rows; y++) {
+    cout << "|";
+    for (int x = 0; x < columns; x++) {
+      Column col = operator[](x);
+      if (col.getValueType() == ValueType::flt) {
+        cout << setw(8) << setfill(' ') << setprecision(0) << left << fixed
+             << stof(col.getValueAt(y)) << "\t"
+             << "|";
+
+      } else if (col.getValueType() == ValueType::str) {
+        cout << setw(8) << setfill(' ') << setprecision(0) << left << fixed
+             << col.getValueAt(y) << "\t"
+             << "|";
+      }
+    }
+    cout << endl;
+  };
+  cout << "+" << setfill('=') << setw(16 * columns - 1) << "" << setw(1)
+       << setfill(' ') << "+" << endl;
+};
+
+void Table::from_csv(vector<vector<string>> &csv) {
+  int colNo = stoi(csv[0][0]), rowNo = stoi(csv[1][0]);
+  columns = colNo;
+  rows = rowNo;
+
+  for (int x = 0; x < columns; x++) {
+    string header = csv[2][x];
+    ValueType dttype;
+
+    if (cmpstr(csv[3][x], "string")) {
+      dttype = ValueType::str;
+    } else if (cmpstr(csv[3][x], "number")) {
+      dttype = ValueType::flt;
+    }
+    addColumn(header, dttype);
+  };
+  for (int row = 4; row <= rows + 3; row++) {
+    for (int col = 0; col < columns; col++) {
+      string value = csv[row][col];
+
+      operator[](col).setValueAt(row, value);
+    }
+  }
+};
+
+vector<string> Table::to_csv() {
+  vector<string> csv;
+  string c = to_string(columns);
+  string r = to_string(rows);
+
+  csv.push_back(c);
+  csv.push_back(r);
+  string entry = "";
+  for (int x = 0; x < columns; x++) {
+    entry += data[x].getHeader() + ",";
+  }
+  csv.push_back(entry.substr(0, entry.length() - 1));
+  entry = "";
+
+  for (int x = 0; x < columns; x++) {
+    string dttype =
+        (data[x].getValueType() == ValueType::flt) ? "number" : "string";
+    entry += dttype + ",";
+  }
+  csv.push_back(entry.substr(0, entry.length() - 1));
+  entry = "";
+
+  for (int y = 0; y < rows; y++) {
+    for (int x = 0; x < columns; x++) {
+      if (y < rows - 1) entry += data[x].getValueAt(y) + ",";
+    }
+    csv.push_back(entry);
+    entry = "";
+  };
+  return csv;
+}
+
+vector<string> Table::to_html() {
+  vector<string> tags;
+
+  tags.push_back(R"(<!DOCTYPE html>)");
+  tags.push_back(R"(<html>)");
+
+  tags.push_back(R"(<head>)");
+  tags.push_back(R"(  <meta charset="UTF-8">)");
+
+  tags.push_back(R"(  <title>Table</title>)");
+  tags.push_back(
+      R"(  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">)");
+  tags.push_back(R"(  <link rel="stylesheet" href="css/style.css">)");
+  tags.push_back(R"(</head>)");
+
+  tags.push_back(R"(<body>)");
+  tags.push_back(R"(  <section>)");
+  tags.push_back(R"(    <h1>Table</h1>)");
+  tags.push_back(R"(    <div class="tbl-header">)");
+  tags.push_back(R"(      <table cellpadding="0" cellspacing="0" border="0">)");
+  tags.push_back(R"(        <thead>)");
+  tags.push_back(R"(          <tr>)");
+
+  string tag;
+  for (int x = 0; x < columns; x++) {
+    string header = operator[](x).getHeader();
+    tag = "<th>" + header + "</th>";
+    tags.push_back(tag);
+  };
+
+  tags.push_back(R"(          </tr>)");
+  tags.push_back(R"(        </thead>)");
+  tags.push_back(R"(      </table>)");
+  tags.push_back(R"(    </div>)");
+  tags.push_back(R"(    <div class="tbl-content">)");
+  tags.push_back(R"(      <table cellpadding="0" cellspacing="0" border="0">)");
+  tags.push_back(R"(        <tbody>)");
+
+  for (int y = 0; y < rows; y++) {
+    tags.push_back(R"(        <tr>)");
+    for (int x = 0; x < columns; x++) {
+      string value = operator[](x).getValueAt(y);
+      tag = "<td>" + value + "</td>";
+      tags.push_back(tag);
+    }
+    tags.push_back(R"(        </tr>)");
+  };
+
+  tags.push_back(R"(        </tbody>)");
+  tags.push_back(R"(      </table>)");
+  tags.push_back(R"(    </div>)");
+  tags.push_back(R"(  </section>)");
+  tags.push_back(R"(  <script src="js/index.js"></script>)");
+  tags.push_back(R"(</body>)");
+  tags.push_back(R"(</html>)");
+  return tags;
+};
+
+vector<string> Table::getAllColumnHeaders() {
+  vector<string> headers;
+  for (int x = 0; x <= columns; x++) {
+    string header = operator[](x).getHeader();
+    headers.push_back(header);
+  }
+  return headers;
+};
+
+float Table::getMinimumValue() {
+  vector<float> values;
+  for (int x = 0; x < columns; x++) {
+    Column col = operator[](x);
+    if (col.getValueType() == ValueType::str) continue;
+    values.push_back(col.getMinimumValue());
+  }
+  return getMin(values);
+};
+
+float Table::getMaxiumValue() {
+  vector<float> values;
+  for (int x = 0; x < columns; x++) {
+    Column col = operator[](x);
+    if (col.getValueType() == ValueType::str) continue;
+    values.push_back(col.getMaximumValue());
+  }
+  return getMax(values);
+};
+
+vector<string> Table::getAllValues() {
+  vector<string> rawValues;
+  for (int x = 0; x < columns; x++) {
+    Column col = operator[](x);
+    if (col.getValueType() == ValueType::str) continue;
+    vector<string> rawColValues = col.getAllValues();
+    for (string rawValue : rawColValues) {
+      rawValues.push_back(rawValue);
+    }
+  };
+  return rawValues;
+}
+
+float Table::getMedian() {
+  vector<string> rawValues = getAllValues();
+  vector<float> values = convertStrToFloats(rawValues);
+  return calculateMedian(values);
+};
+float Table::getMean() {
+  vector<string> rawValues = getAllValues();
+  vector<float> values = convertStrToFloats(rawValues);
+  return calculateMean(values);
+};
+float Table::getVariance() {
+  vector<string> rawValues = getAllValues();
+  vector<float> values = convertStrToFloats(rawValues);
+  return calculateVariance(values);
+};
+float Table::getStdDeviation() {
+  vector<string> rawValues = getAllValues();
+  vector<float> values = convertStrToFloats(rawValues);
+  return calculateStandardDeviation(values);
+};
