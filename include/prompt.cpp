@@ -7,10 +7,6 @@
 #include <vector>
 using namespace std;
 
-void outputHelpMessage() {
-  cout << "\nCore commands\n";
-  cout << setw(20) << setfill('=') << "\n";
-};
 
 vector<string> parseArgs(string str) {
   vector<string> output;

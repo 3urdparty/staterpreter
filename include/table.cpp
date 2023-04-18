@@ -320,16 +320,23 @@ void Table::displayVerticalHistogram(){
 
 };
 
-void displayOddRows();
-void displayEvenRows();
-void getPrimes(string& colHeader);
-void deleteOccurrenceInColumn(string& colHeader);
-void deleteRow(int& rowNo);
-void deleteColumn(string& colHeader);
-void insertRowAtIndex(vector<string>& rawValues, int& index);
-void replaceEveryInstance(string& valToBeReplaced, string& valToReplace);
-void replaceEveryInstanceInColumn(string& colHeader, string& valToBeReplaced,
-                                  string& valToReplace);
+void Table::deleteRow(int& rowNo){
+
+};
+void Table::deleteColumn(string& colHeader){
+
+};
+void Table::insertRowAtIndex(vector<string>& rawValues, int& index){
+
+};
+void Table::replaceEveryInstance(string& valToBeReplaced, string& valToReplace){
+
+};
+void Table::replaceEveryInstanceInColumn(string& colHeader,
+                                         string& valToBeReplaced,
+                                         string& valToReplace){
+
+};
 void Table::sortTableByColumn(string& colHeader) {
   Column col = getColumnByHeader(colHeader);
   vector<string> rawValues = col.getAllValues();
@@ -349,7 +356,6 @@ void Table::sortTableByColumn(string& colHeader) {
   };
 };
 
-
 void Table::swapTablRows(int rowIndex1, int rowIndex2) {
   for (int x = 0; x < columns; x++) {
     Column& col = operator[](x);
@@ -358,4 +364,13 @@ void Table::swapTablRows(int rowIndex1, int rowIndex2) {
     col.setValueAt(rowIndex1, tmp2);
     col.setValueAt(rowIndex2, tmp1);
   }
+};
+
+vector<string> Table::getAllValuesInRow(int rowNo) {
+  vector<string> rawValues;
+  for (int x = 0; x < columns; x++) {
+    string val = operator[](x).getValueAt(rowNo);
+    rawValues.push_back(val);
+  };
+  return rawValues;
 };

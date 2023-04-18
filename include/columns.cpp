@@ -107,3 +107,26 @@ tuple<float, float> Column::getRegression() {
   vector<float> values = convertStrToFloats(rawValues);
   return calculateRegression(values);
 };
+
+vector<int> Column::getPrimes() {
+  vector<string> rawValues = getAllValues();
+
+  vector<int> primes;
+  for (string rawValue : rawValues) {
+    int val = stoi(rawValue);
+    if (isPrime(val)) primes.push_back(val);
+  }
+  return primes;
+};
+
+void Column::deleteOccurrenceInColumn(int value) {
+  vector<string> rawValues = getAllValues();
+  vector<float> values = convertStrToFloats(rawValues);
+  for (int x = 0; x < values.size(); x++) {
+    if (values[x] == value) {
+    };
+  };
+};
+void Column::deleteOccurrenceInColumn(string value){
+
+};

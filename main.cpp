@@ -24,16 +24,11 @@ int main(int argc, char const *argv[]) {
   outputBanner();
 
   while (true) {
-    // test
     vector<string> args;
-    args = parseArgs("load file.csv");
-    loadFileCMD(args, currentTable, tableLoaded);
-    args = parseArgs("sort Age");
-    sortCMD(args, currentTable, tableLoaded);
-
-    args = parseArgs("show");
-    showCMD(args, currentTable, tableLoaded);
-    return 0;
+    // test
+    args = parseArgs("help");
+    // helpCMD();
+    // return 0;
     // test
 
     cout << colorfmt(32) << "sttrprter" << clearfmt << " >> " << flush;
@@ -57,7 +52,7 @@ int main(int argc, char const *argv[]) {
         } else if (cmpstr(args[0], "html")) {
           generateHTMLCMD(args, currentTable, tableLoaded);
         } else if (cmpstr(args[0], "help")) {
-          outputHelpMessage();
+          helpCMD();
         } else if (cmpstr(args[0], "clear")) {
           system("clear");
         } else if (cmpstr(args[0], "min")) {
@@ -96,7 +91,22 @@ int main(int argc, char const *argv[]) {
           columnsCMD(args, currentTable, tableLoaded);
         } else if (cmpstr(args[0], "sort")) {
           sortCMD(args, currentTable, tableLoaded);
-        } else {
+        } else if (cmpstr(args[0], "oddrows")) {
+          oddRowsCMD(args, currentTable, tableLoaded);
+        } else if (cmpstr(args[0], "evenrows")) {
+          evenRowsCMD(args, currentTable, tableLoaded);
+        } else if (cmpstr(args[0], "primes")) {
+          primesCMD(args, currentTable, tableLoaded);
+        } else if (cmpstr(args[0], "delete")) {
+          deleteCMD(args, currentTable, tableLoaded);
+
+        } else if (cmpstr(args[0], "insert")) {
+          insertRowCMD(args, currentTable, tableLoaded);
+        } else if (cmpstr(args[0], "replace")) {
+          replaceCMD(args, currentTable, tableLoaded);
+        }
+
+        else {
           cout << "Command not recognized. Enter 'help' for a list of commands."
                << endl;
         };

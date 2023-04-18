@@ -23,7 +23,7 @@ class Column {
 
   void setHeader(string header);
   string getHeader();
-
+  vector<int> getPrimes();
   void setIndex(unsigned int i);
   int getIndex();
 
@@ -41,7 +41,8 @@ class Column {
   float getStdDeviation();
   tuple<float, float> getRegression();
   vector<string> getAllValues();
-
+  void deleteOccurrenceInColumn(int value);
+  void deleteOccurrenceInColumn(string value);
  private:
   int index;
   string header;

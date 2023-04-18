@@ -22,6 +22,7 @@ float calculateVariance(vector<float>& values);
 float calculateStandardDeviation(vector<float>& values);
 float calculateCorrelation(vector<float>& col1_values,
                            vector<float>& col2_values);
+bool isPrime(int number);
 tuple<float, float> calculateRegression(vector<float>& values);
 string join(vector<string>& strings, string delimiter);
 vector<string> convertFloatsToStrs(vector<float>& values);

@@ -162,3 +162,12 @@ string join(vector<string>& strings, string delimiter) {
   output += strings[strings.size() - 2];
   return output;
 };
+
+bool isPrime(int number) {
+  for (int x = 2; x < number / 2; x++) {
+    if (number % x == 0) {
+      return false;
+    }
+  }
+  return true;
+}

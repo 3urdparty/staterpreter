@@ -54,10 +54,11 @@ class Table {
   int getNumberOfColumns();
   void displayVerticalHistogram();
   void displayHorizontalHistogram();
+  
   void sortColumnsByColumn(string& colHeader);
-  void displayOddRows();
-  void displayEvenRows();
-  void getPrimes(string& colHeader);
+
+
+
   void deleteOccurrenceInColumn(string& colHeader);
   void deleteRow(int& rowNo);
   void deleteColumn(string& colHeader);
@@ -68,5 +69,6 @@ class Table {
   vector<string> to_html();
   void sortTableByColumn(string& colHeader);
   void swapTablRows(int rowIndex1, int rowIndex2);
+  vector<string> getAllValuesInRow(int rowNo);
 };
 #endif

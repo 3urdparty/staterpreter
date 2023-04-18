@@ -29,4 +29,12 @@ void vhistoCMD(vector<string>& args, Table& currentTable, bool& tableLoaded);
 void columnsCMD(vector<string>& args, Table& currentTable, bool& tableLoaded);
 void rowsCMD(vector<string>& args, Table& currentTable, bool& tableLoaded);
 void sortCMD(vector<string>& args, Table& currentTable, bool& tableLoaded);
+void helpCMD();
+void manCMD(vector<string>& args, Table& currentTable, bool& tableLoaded);
+void oddRowsCMD(vector<string>& args, Table& currentTable, bool& tableLoaded);
+void evenRowsCMD(vector<string>& args, Table& currentTable, bool& tableLoaded);
+void primesCMD(vector<string>& args, Table& currentTable, bool& tableLoaded);
+void deleteCMD(vector<string>& args, Table& currentTable, bool& tableLoaded);
+void insertRowCMD(vector<string>& args, Table& currentTable, bool& tableLoaded);
+void replaceCMD(vector<string>& args, Table& currentTable, bool& tableLoaded);
 #endif
