@@ -16,11 +16,13 @@ Column::Column(string h, ValueType t) {
 Column::~Column(){
 
 };
+string& Column::operator[](size_t rowNo) { return rows[rowNo]; };
 
 void Column::setValueAt(unsigned int rowNo, string value) {
-  rows.push_back(value);
+  rows[rowNo] = value;
 };
 
+void Column::pushValue(string value) { rows.push_back(value); };
 void Column::displayColumn() {
   auto [w, h] = getTerminalDimensions();
 
@@ -98,4 +100,10 @@ vector<string> Column::getAllValues() {
     values.push_back(rows[x]);
   };
   return values;
+};
+
+tuple<float, float> Column::getRegression() {
+  vector<string> rawValues = getAllValues();
+  vector<float> values = convertStrToFloats(rawValues);
+  return calculateRegression(values);
 };

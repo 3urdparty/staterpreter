@@ -35,6 +35,7 @@ void Table::addColumn(string header, ValueType dttype) {
   newCol.setIndex(newIndex);
   newCol.setValueType(dttype);
   data.push_back(newCol);
+  // columns += 1;
 };
 
 /// @brief Removes column from table, including its data and their records
@@ -45,7 +46,7 @@ void Table::removeColumn(string header){
     // columnIndex.erase(columnIndex);
 };
 
-Column &Table::operator[](size_t i) { return data[i]; };
+Column& Table::operator[](size_t i) { return data[i]; };
 
 Column Table::operator[](size_t i) const {
   const Column col = data[i];
@@ -61,7 +62,7 @@ bool Table::columnExists(string header) {
   return false;
 }
 
-Column &Table::getColumnByHeader(string header) {
+Column& Table::getColumnByHeader(string header) {
   for (int i = 0; i <= data.size(); i++) {
     if (cmpstr(operator[](i).getHeader(), header)) {
       return operator[](i);
@@ -107,7 +108,7 @@ void Table::displayTable() const {
        << setfill(' ') << "+" << endl;
 };
 
-void Table::from_csv(vector<vector<string>> &csv) {
+void Table::from_csv(vector<vector<string>>& csv) {
   int colNo = stoi(csv[0][0]), rowNo = stoi(csv[1][0]);
   columns = colNo;
   rows = rowNo;
@@ -127,7 +128,7 @@ void Table::from_csv(vector<vector<string>> &csv) {
     for (int col = 0; col < columns; col++) {
       string value = csv[row][col];
 
-      operator[](col).setValueAt(row, value);
+      operator[](col).pushValue(value);
     }
   }
 };
@@ -139,27 +140,28 @@ vector<string> Table::to_csv() {
 
   csv.push_back(c);
   csv.push_back(r);
-  string entry = "";
-  for (int x = 0; x < columns; x++) {
-    entry += data[x].getHeader() + ",";
-  }
-  csv.push_back(entry.substr(0, entry.length() - 1));
+
+  vector<string> headers = getAllColumnHeaders();
+  string entry = join(headers, ",");
+  csv.push_back(entry);
   entry = "";
 
+  vector<string> datatypes;
   for (int x = 0; x < columns; x++) {
     string dttype =
         (data[x].getValueType() == ValueType::flt) ? "number" : "string";
-    entry += dttype + ",";
+    datatypes.push_back(dttype);
   }
-  csv.push_back(entry.substr(0, entry.length() - 1));
-  entry = "";
+  entry = join(datatypes, ",");
+  csv.push_back(entry);
 
+  vector<string> values;
   for (int y = 0; y < rows; y++) {
     for (int x = 0; x < columns; x++) {
-      if (y < rows - 1) entry += data[x].getValueAt(y) + ",";
+      values.push_back(data[x].getValueAt(y));
     }
+    entry = join(values, ",");
     csv.push_back(entry);
-    entry = "";
   };
   return csv;
 }
@@ -283,4 +285,77 @@ float Table::getStdDeviation() {
   vector<string> rawValues = getAllValues();
   vector<float> values = convertStrToFloats(rawValues);
   return calculateStandardDeviation(values);
+};
+void Table::displayReport() {
+  for (int x = 0; x < columns; x++) {
+    Column col = operator[](x);
+    if (col.getValueType() == ValueType::str) continue;
+    float min = col.getMinimumValue();
+    float max = col.getMaximumValue();
+    float median = col.getMedian();
+    float mean = col.getMean();
+    float variance = col.getVariance();
+    float stdv = col.getStdDeviation();
+    auto [a, b] = col.getRegression();
+
+    cout << "Column " << colorfmt(fg::cyan) << col.getHeader() << clearfmt
+         << ":" << endl
+         << bold << "min" << clearfmt << " = " << min << endl
+         << bold << "max" << clearfmt << " = " << max << endl
+         << bold << "med" << clearfmt << " = " << median << endl
+         << bold << "μ" << clearfmt << " = " << mean << endl
+         << bold << "σ²" << clearfmt << " = " << variance << endl
+         << bold << "σ" << clearfmt << " = " << stdv << endl
+         << bold << "regr(x,y)" << clearfmt << " : " << bold << "Y" << clearfmt
+         << " = " << colorfmt(fg::yellow) << a << clearfmt << " + "
+         << colorfmt(fg::yellow) << b << clearfmt << "x" << endl
+         << endl;
+  };
+  cout << endl;
+};
+
+int Table::getNumberOfRows() { return rows; };
+int Table::getNumberOfColumns() { return columns; };
+void Table::displayVerticalHistogram(){
+
+};
+
+void displayOddRows();
+void displayEvenRows();
+void getPrimes(string& colHeader);
+void deleteOccurrenceInColumn(string& colHeader);
+void deleteRow(int& rowNo);
+void deleteColumn(string& colHeader);
+void insertRowAtIndex(vector<string>& rawValues, int& index);
+void replaceEveryInstance(string& valToBeReplaced, string& valToReplace);
+void replaceEveryInstanceInColumn(string& colHeader, string& valToBeReplaced,
+                                  string& valToReplace);
+void Table::sortTableByColumn(string& colHeader) {
+  Column col = getColumnByHeader(colHeader);
+  vector<string> rawValues = col.getAllValues();
+  vector<float> values = convertStrToFloats(rawValues);
+
+  bool swapped;
+  int n = values.size();
+  for (int i = 0; i < n - 1; i++) {
+    for (int j = 0; j < n - i - 1; j++) {
+      if (values[j] > values[j + 1]) {
+        swap(values[j], values[j + 1]);
+        swapTablRows(j, j + 1);
+        swapped = true;
+      }
+    }
+    if (!swapped) break;
+  };
+};
+
+
+void Table::swapTablRows(int rowIndex1, int rowIndex2) {
+  for (int x = 0; x < columns; x++) {
+    Column& col = operator[](x);
+    string tmp1 = col.getValueAt(rowIndex1);
+    string tmp2 = col.getValueAt(rowIndex2);
+    col.setValueAt(rowIndex1, tmp2);
+    col.setValueAt(rowIndex2, tmp1);
+  }
 };

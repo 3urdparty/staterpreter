@@ -32,11 +32,11 @@ int white = 47;
 string clearfmt = "\x1b[0m";
 string bold = "\e[1m";
 string colorfmt(int fgcolor, int bgcolor) {
-  string fmt;
+  string fmt; 
   if (bgcolor == 0) {
     fmt += "\x1b[" + to_string(fgcolor) + "m";
   } else {
-    fmt = "\x1b[" + to_string(fgcolor) + ";" + to_string(bgcolor);
+    fmt = "\x1b[" + to_string(fgcolor) + ";" + to_string(bgcolor) + "m";
   }
   return fmt;
 }

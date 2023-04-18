@@ -10,6 +10,7 @@
 #include "include/table.hpp"
 #include "include/textformat.hpp"
 #include "include/utilities.hpp"
+
 using namespace std;
 
 // Struct to store a single column, its data and header
@@ -18,15 +19,27 @@ using namespace std;
 int main(int argc, char const *argv[]) {
   Table currentTable;
   bool tableLoaded = false;
+
   system("clear");
   outputBanner();
 
   while (true) {
+    // test
+    vector<string> args;
+    args = parseArgs("load file.csv");
+    loadFileCMD(args, currentTable, tableLoaded);
+    args = parseArgs("sort Age");
+    sortCMD(args, currentTable, tableLoaded);
+
+    args = parseArgs("show");
+    showCMD(args, currentTable, tableLoaded);
+    return 0;
+    // test
+
     cout << colorfmt(32) << "sttrprter" << clearfmt << " >> " << flush;
     string command;
     getline(cin, command);
-    vector<string> args =
-        parseArgs(command);  // list of arguments passed to the prompt
+    args = parseArgs(command);  // list of arguments passed to the prompt
 
     if (args.size() >= 1)
 
@@ -65,8 +78,25 @@ int main(int argc, char const *argv[]) {
           addCMD(args, currentTable, tableLoaded);
         } else if (cmpstr(args[0], "sub")) {
           subCMD(args, currentTable, tableLoaded);
-        } 
-        else {
+        } else if (cmpstr(args[0], "corr")) {
+          corrCMD(args, currentTable, tableLoaded);
+        } else if (cmpstr(args[0], "regression")) {
+          regressionCMD(args, currentTable, tableLoaded);
+        } else if (cmpstr(args[0], "titles")) {
+          titlesCMD(args, currentTable, tableLoaded);
+        } else if (cmpstr(args[0], "hhisto")) {
+          hhistoCMD(args, currentTable, tableLoaded);
+        } else if (cmpstr(args[0], "vhisto")) {
+          vhistoCMD(args, currentTable, tableLoaded);
+        } else if (cmpstr(args[0], "report")) {
+          reportCMD(args, currentTable, tableLoaded);
+        } else if (cmpstr(args[0], "rows")) {
+          rowsCMD(args, currentTable, tableLoaded);
+        } else if (cmpstr(args[0], "columns")) {
+          columnsCMD(args, currentTable, tableLoaded);
+        } else if (cmpstr(args[0], "sort")) {
+          sortCMD(args, currentTable, tableLoaded);
+        } else {
           cout << "Command not recognized. Enter 'help' for a list of commands."
                << endl;
         };

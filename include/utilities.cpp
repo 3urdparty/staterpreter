@@ -6,6 +6,7 @@
 
 #include <algorithm>
 #include <cmath>
+#include <iomanip>
 #include <iostream>
 #include <string>
 #include <tuple>
@@ -56,7 +57,7 @@ float getMax(vector<float>& values) {
   int index;
   float maxVal = values[0];
   for (int x = 0; x < values.size() - 1; x++) {
-    if (min(values[x], values[x + 1]) > maxVal) {
+    if (max(values[x], values[x + 1]) > maxVal) {
       index = x;
       maxVal = max(values[x], values[x + 1]);
     }
@@ -72,15 +73,20 @@ vector<float> convertStrToFloats(vector<string>& strings) {
   return values;
 }
 
+vector<string> convertFloatsToStrs(vector<float>& values) {
+  vector<string> rawValues;
+  for (float val : values) {
+    rawValues.push_back(to_string(val));
+  };
+  return rawValues;
+}
 float calculateMedian(vector<float> values) {
   int n = values.size();
   float median;
   sort(values.begin(), values.end());
 
   if (n % 2 == 0) {
-    cout << n / 2 << endl;
     median = (values[n / 2 - 1] + values[(n / 2)]) / 2.0f;
-    cout << "even " << values[(n / 2) + 1] << endl;
   } else {
     median = values[n / 2];
   }
@@ -103,7 +109,6 @@ float calculateVariance(vector<float>& values) {
   float sum;
   float mean = calculateMean(values);
   for (int n = 0; n < values.size(); n++) {
-    cout << values[n] << mean << endl;
     sum += pow((values[n] - mean), 2);
   };
   return sum / 2.f;
@@ -112,4 +117,48 @@ float calculateVariance(vector<float>& values) {
 float calculateStandardDeviation(vector<float>& values) {
   float variance = calculateVariance(values);
   return sqrt(variance);
+};
+
+float calculateCorrelation(vector<float>& col1_values,
+                           vector<float>& col2_values) {
+  float sum1;
+  float sum2;
+  float sum3;
+  float mean1 = calculateMean(col1_values);
+  float mean2 = calculateMean(col2_values);
+  for (int i = 0; i < col1_values.size(); i++) {
+    sum1 += ((col1_values[i] - mean1) * (col2_values[i] - mean2));
+    sum2 += pow((col1_values[i] - mean1), 2);
+    sum3 += pow((col2_values[i] - mean2), 2);
+  };
+  return ((sum1) / (sqrt(sum2 * sum3)));
+}
+
+tuple<float, float> calculateRegression(vector<float>& values) {
+  vector<float> indices;
+  for (int x = 0; x < values.size(); x++) {
+    indices.push_back(x);
+  };
+
+  float r = calculateCorrelation(indices, values);
+  float stdx = calculateStandardDeviation(indices);
+  float stdy = calculateStandardDeviation(values);
+
+  float b = r * (stdx / stdy);
+
+  float meanx = calculateMean(indices);
+  float meany = calculateMean(values);
+  float yIntercept = meany - b * (meanx);
+
+  return tuple(yIntercept, b);
+  // float m = calculateCorrelation()
+};
+
+string join(vector<string>& strings, string delimiter) {
+  string output;
+  for (int x = 0; x < strings.size() - 2; x++) {
+    output += strings[x] + delimiter;
+  };
+  output += strings[strings.size() - 2];
+  return output;
 };

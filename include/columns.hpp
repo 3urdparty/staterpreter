@@ -13,6 +13,8 @@ class Column {
  public:
   Column(string columnName, ValueType dttype);
   ~Column();
+  string& operator[](size_t rowNo);
+  string operator[](const size_t rowNo) const;
 
   string getValueAt(unsigned int rowNo);  // gets value at row number 'rowNo'
   void setValueAt(unsigned int rowNo,
@@ -35,7 +37,9 @@ class Column {
   float getMedian();
   float getMean();
   float getVariance();
+  void pushValue(string value);
   float getStdDeviation();
+  tuple<float, float> getRegression();
   vector<string> getAllValues();
 
  private:

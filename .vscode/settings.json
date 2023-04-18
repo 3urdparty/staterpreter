@@ -66,6 +66,8 @@
         "typeinfo": "cpp",
         "unordered_map": "cpp",
         "algorithm": "cpp",
-        "__verbose_abort": "cpp"
-    }
+        "__verbose_abort": "cpp",
+        "__memory": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }

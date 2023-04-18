@@ -20,5 +20,9 @@ float calculateSum(vector<float>& values);
 float calculateMean(vector<float>& values);
 float calculateVariance(vector<float>& values);
 float calculateStandardDeviation(vector<float>& values);
-
+float calculateCorrelation(vector<float>& col1_values,
+                           vector<float>& col2_values);
+tuple<float, float> calculateRegression(vector<float>& values);
+string join(vector<string>& strings, string delimiter);
+vector<string> convertFloatsToStrs(vector<float>& values);
 #endif

@@ -31,7 +31,6 @@ class Table {
 
   Column& getColumnByHeader(string i);
 
-  // void setValueAt(string header, unsigned int rowNo, string val);
   string getValueAt(string header, unsigned int rowNo);
   string getValueAt(int colIndex, unsigned int rowNo);
 
@@ -50,7 +49,24 @@ class Table {
   float getStdDeviation();
   vector<string> getAllValues();
 
+  void displayReport();
+  int getNumberOfRows();
+  int getNumberOfColumns();
+  void displayVerticalHistogram();
+  void displayHorizontalHistogram();
+  void sortColumnsByColumn(string& colHeader);
+  void displayOddRows();
+  void displayEvenRows();
+  void getPrimes(string& colHeader);
+  void deleteOccurrenceInColumn(string& colHeader);
+  void deleteRow(int& rowNo);
+  void deleteColumn(string& colHeader);
+  void insertRowAtIndex(vector<string>& rawValues, int& index);
+  void replaceEveryInstance(string& valToBeReplaced, string& valToReplace);
+  void replaceEveryInstanceInColumn(string& colHeader, string& valToBeReplaced,
+                                    string& valToReplace);
   vector<string> to_html();
+  void sortTableByColumn(string& colHeader);
+  void swapTablRows(int rowIndex1, int rowIndex2);
 };
-
 #endif
