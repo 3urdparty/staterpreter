@@ -109,24 +109,18 @@ tuple<float, float> Column::getRegression() {
 };
 
 vector<int> Column::getPrimes() {
-  vector<string> rawValues = getAllValues();
-
   vector<int> primes;
-  for (string rawValue : rawValues) {
-    int val = stoi(rawValue);
-    if (isPrime(val)) primes.push_back(val);
+  vector<string> rawValues = getAllValues();
+  vector<int> numbers = convertToInts(rawValues);
+
+  for (int num : numbers) {
+    if (isPrime(num)) primes.push_back(num);
   }
   return primes;
 };
 
-void Column::deleteOccurrenceInColumn(int value) {
-  vector<string> rawValues = getAllValues();
-  vector<float> values = convertStrToFloats(rawValues);
-  for (int x = 0; x < values.size(); x++) {
-    if (values[x] == value) {
-    };
-  };
+void Column::insertAtRowIndex(int rowIndex, string value) {
+  rows.insert(rows.begin() + rowIndex, value);
 };
-void Column::deleteOccurrenceInColumn(string value){
 
-};
+void Column::deleteRow(int rowIndex) { rows.erase(rows.begin() + rowIndex); };

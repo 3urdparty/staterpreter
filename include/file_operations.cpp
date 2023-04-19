@@ -41,7 +41,10 @@ void generateHTMLFile(){
 
 void parseCSV(vector<string>& content, vector<vector<string>>& csv) {
   for (string line : content) {
-    vector<string> csv_entry = splitString(line);
+    vector<string> csv_entry = splitString(line, ',');
+    for (int x = 0; x < csv_entry.size(); x++) {
+      csv_entry[x] = sanitizeString(csv_entry[x]);
+    };
     csv.push_back(csv_entry);
   }
 };

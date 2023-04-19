@@ -8,7 +8,7 @@
 #include "utilities.hpp"
 using namespace std;
 void loadFileCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
-  if (args.size() >= 2) {
+  if (args.size() == 2) {
     string path = args[1];
     if (fileExists(path)) {
       vector<string> lines;
@@ -16,7 +16,7 @@ void loadFileCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
 
       readLines(path, lines);
       parseCSV(lines, csv);
-
+      currentTable.flushTable();
       currentTable.from_csv(csv);
       tableLoaded = true;
       cout << "Loaded " << colorfmt(fg::magenta) << path << clearfmt << endl;
@@ -25,6 +25,6 @@ void loadFileCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
            << " not found" << endl;
     }
   } else {
-    cout << "Please provide an input file" << endl;
+    cout << "Please provide only one input file" << endl;
   }
 };

@@ -162,24 +162,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ProjectName
+# Target rules for targets named staterpreter
 
 # Build rule for target.
-ProjectName: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ProjectName
-.PHONY : ProjectName
+staterpreter: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 staterpreter
+.PHONY : staterpreter
 
 # fast build rule for target.
-ProjectName/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjectName.dir/build.make CMakeFiles/ProjectName.dir/build
-.PHONY : ProjectName/fast
+staterpreter/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/build
+.PHONY : staterpreter/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjectName.dir/build.make CMakeFiles/ProjectName.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -187,7 +187,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjectName.dir/build.make CMakeFiles/ProjectName.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -195,7 +195,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjectName.dir/build.make CMakeFiles/ProjectName.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -210,7 +210,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... ProjectName"
+	@echo "... staterpreter"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

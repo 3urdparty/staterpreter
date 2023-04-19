@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /Users/theycallmemuzz/Code/StatisticalAnalysisInterpreter/out
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/ProjectName.dir/all
+all: CMakeFiles/staterpreter.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/ProjectName.dir/clean
+clean: CMakeFiles/staterpreter.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ProjectName.dir
+# Target rules for target CMakeFiles/staterpreter.dir
 
 # All Build rule for target.
-CMakeFiles/ProjectName.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjectName.dir/build.make CMakeFiles/ProjectName.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjectName.dir/build.make CMakeFiles/ProjectName.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/theycallmemuzz/Code/StatisticalAnalysisInterpreter/out/build/CMakeFiles --progress-num=1,2 "Built target ProjectName"
-.PHONY : CMakeFiles/ProjectName.dir/all
+CMakeFiles/staterpreter.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/theycallmemuzz/Code/StatisticalAnalysisInterpreter/out/build/CMakeFiles --progress-num=1,2 "Built target staterpreter"
+.PHONY : CMakeFiles/staterpreter.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ProjectName.dir/rule: cmake_check_build_system
+CMakeFiles/staterpreter.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theycallmemuzz/Code/StatisticalAnalysisInterpreter/out/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ProjectName.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/staterpreter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theycallmemuzz/Code/StatisticalAnalysisInterpreter/out/build/CMakeFiles 0
-.PHONY : CMakeFiles/ProjectName.dir/rule
+.PHONY : CMakeFiles/staterpreter.dir/rule
 
 # Convenience name for target.
-ProjectName: CMakeFiles/ProjectName.dir/rule
-.PHONY : ProjectName
+staterpreter: CMakeFiles/staterpreter.dir/rule
+.PHONY : staterpreter
 
 # clean rule for target.
-CMakeFiles/ProjectName.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjectName.dir/build.make CMakeFiles/ProjectName.dir/clean
-.PHONY : CMakeFiles/ProjectName.dir/clean
+CMakeFiles/staterpreter.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/clean
+.PHONY : CMakeFiles/staterpreter.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

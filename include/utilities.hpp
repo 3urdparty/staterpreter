@@ -7,7 +7,7 @@
 #include <vector>
 using namespace std;
 
-vector<string> splitString(string str);
+vector<string> splitString(string str, char delimiter);
 bool cmpstr(string str1, string str2);
 tuple<int, int> getTerminalDimensions();
 
@@ -26,4 +26,9 @@ bool isPrime(int number);
 tuple<float, float> calculateRegression(vector<float>& values);
 string join(vector<string>& strings, string delimiter);
 vector<string> convertFloatsToStrs(vector<float>& values);
+bool stringIsFloat(string str);
+string sanitizeString(string str);
+vector<string> sanitizeStrings(vector<string> strings);
+vector<string> convertToStrings(vector<int> numbers);
+vector<int> convertToInts(vector<string> strings);
 #endif

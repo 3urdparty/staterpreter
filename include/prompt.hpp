@@ -10,4 +10,5 @@ void outputHelpMessage();
 vector<string> parseArgs(string str);
 void outputBanner();
 void outputLoadingIcon();
+string sanitizeString(string str);
 #endif

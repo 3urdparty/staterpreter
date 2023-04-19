@@ -24,18 +24,21 @@ void primesCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
                << endl;
         } else {
           vector<int> primes = col.getPrimes();
-          cout << "The primes in column " << colorfmt(fg::magenta) << colHeader
-               << clearfmt << " are " << colorfmt(fg::yellow);
-          for (int prime : primes) {
-            cout << prime << " ";
+          if (primes.size() == 0) {
+            cout << "No primes in column " << colorfmt(fg::yellow) << colHeader
+                 << clearfmt << endl;
+          } else {
+            vector<string> strings = convertToStrings(primes);
+
+            cout << "The primes in column " << colorfmt(fg::magenta)
+                 << colHeader << clearfmt << " are " << colorfmt(fg::yellow)
+                 << join(strings, ", ") << clearfmt << endl;
           }
-          cout << clearfmt << endl;
         }
       } else {
         cout << "Sorry, column " << colorfmt(fg::magenta) << colHeader
              << clearfmt << " not found" << endl;
       }
-
     } else {
       cout << "Please enter one column at a time" << endl;
     };

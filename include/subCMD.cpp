@@ -14,7 +14,7 @@ void subCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
       cout << "Please enter two columns to be substract from one another"
            << endl;
     } else if (args.size() == 3) {
-      string colHeader1 = args[1], colHeader2 = args[2];
+      string colHeader1 = args[2], colHeader2 = args[1];
       if (currentTable.columnExists(colHeader1)) {
         if (currentTable.columnExists(colHeader2)) {
           Column col1 = currentTable.getColumnByHeader(colHeader1);
@@ -52,7 +52,7 @@ void subCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
             float value;
             for (int y = 0; y < col1_values.size(); y++) {
               value = col1_values[y] - col2_values[y];
-              cout << setw(8) << "|" << setfill(' ') << setprecision(0) << fixed
+              cout << setw(8) << setfill(' ') << "|"   << setprecision(0) << fixed
                    << value << "\t"
                    << "|";
 

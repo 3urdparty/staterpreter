@@ -1,4 +1,4 @@
-/Users/theycallmemuzz/Code/StatisticalAnalysisInterpreter/out/build/CMakeFiles/ProjectName.dir
+/Users/theycallmemuzz/Code/StatisticalAnalysisInterpreter/out/build/CMakeFiles/staterpreter.dir
 /Users/theycallmemuzz/Code/StatisticalAnalysisInterpreter/out/build/CMakeFiles/edit_cache.dir
 /Users/theycallmemuzz/Code/StatisticalAnalysisInterpreter/out/build/CMakeFiles/rebuild_cache.dir
 /Users/theycallmemuzz/Code/StatisticalAnalysisInterpreter/out/build/CMakeFiles/list_install_components.dir

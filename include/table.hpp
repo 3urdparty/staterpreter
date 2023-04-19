@@ -22,7 +22,6 @@ class Table {
   void addColumn(string header,
                  ValueType dttype);  // Creates new column with header 'header'
                                      // and appends it to the list of columns
-  void removeColumn(string header);  // Removes column with header 'header'
 
   bool columnExists(string header);
 
@@ -54,15 +53,13 @@ class Table {
   int getNumberOfColumns();
   void displayVerticalHistogram();
   void displayHorizontalHistogram();
-  
+  bool canBeInsertedIntoTable(vector<string> values);
+
   void sortColumnsByColumn(string& colHeader);
 
-
-
-  void deleteOccurrenceInColumn(string& colHeader);
   void deleteRow(int& rowNo);
   void deleteColumn(string& colHeader);
-  void insertRowAtIndex(vector<string>& rawValues, int& index);
+  void insertRowAtIndex(vector<string>& rawValues, int rowIndex);
   void replaceEveryInstance(string& valToBeReplaced, string& valToReplace);
   void replaceEveryInstanceInColumn(string& colHeader, string& valToBeReplaced,
                                     string& valToReplace);
@@ -70,5 +67,8 @@ class Table {
   void sortTableByColumn(string& colHeader);
   void swapTablRows(int rowIndex1, int rowIndex2);
   vector<string> getAllValuesInRow(int rowNo);
+  int getRowIndexOfFirstOccurrence(string& colHeader, string value);
+  int getRowIndexOfFirstOccurrence(string& colHeader, int value);
+  void flushTable();
 };
 #endif

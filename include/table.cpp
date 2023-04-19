@@ -6,6 +6,7 @@
 
 #include "textformat.hpp"
 #include "utilities.hpp"
+
 using namespace std;
 
 Table::Table(){};
@@ -40,10 +41,12 @@ void Table::addColumn(string header, ValueType dttype) {
 
 /// @brief Removes column from table, including its data and their records
 /// @param header
-void Table::removeColumn(string header){
-    // int i = getColumnIndexFromHeader(header);
-    // data.erase(i);
-    // columnIndex.erase(columnIndex);
+void Table::deleteRow(int& rowIndex) {
+  for (size_t i = 0; i < columns; i++) {
+    Column& col = operator[](i);
+    col.deleteRow(rowIndex);
+  };
+  rows--;
 };
 
 Column& Table::operator[](size_t i) { return data[i]; };
@@ -300,6 +303,7 @@ void Table::displayReport() {
 
     cout << "Column " << colorfmt(fg::cyan) << col.getHeader() << clearfmt
          << ":" << endl
+         << setw(15) << setfill('-') << "" << endl
          << bold << "min" << clearfmt << " = " << min << endl
          << bold << "max" << clearfmt << " = " << max << endl
          << bold << "med" << clearfmt << " = " << median << endl
@@ -320,14 +324,27 @@ void Table::displayVerticalHistogram(){
 
 };
 
-void Table::deleteRow(int& rowNo){
-
-};
 void Table::deleteColumn(string& colHeader){
 
 };
-void Table::insertRowAtIndex(vector<string>& rawValues, int& index){
 
+bool Table::canBeInsertedIntoTable(vector<string> values) {
+  for (int i = 0; i < columns; i++) {
+    if (operator[](i).getValueType() == ValueType::flt) {
+      if (!stringIsFloat(values[i])) {
+        return false;
+      }
+    }
+  };
+  return true;
+};
+
+void Table::insertRowAtIndex(vector<string>& rawValues, int rowIndex) {
+  for (size_t i = 0; i < columns; i++) {
+    Column& col = operator[](i);
+    col.insertAtRowIndex(rowIndex, rawValues[i]);
+  };
+  rows += 1;
 };
 void Table::replaceEveryInstance(string& valToBeReplaced, string& valToReplace){
 
@@ -373,4 +390,33 @@ vector<string> Table::getAllValuesInRow(int rowNo) {
     rawValues.push_back(val);
   };
   return rawValues;
+};
+int Table::getRowIndexOfFirstOccurrence(string& colHeader, string value) {
+  Column col = getColumnByHeader(colHeader);
+  vector<string> rawValues = col.getAllValues();
+  for (int i = 0; i < rawValues.size(); i++) {
+    if (cmpstr(rawValues[i], value)) {
+      return i;
+    }
+  }
+  return -1;
+};
+
+
+int Table::getRowIndexOfFirstOccurrence(string& colHeader, int value) {
+  Column col = getColumnByHeader(colHeader);
+  vector<string> rawValues = col.getAllValues();
+  for (int i = 0; i < rawValues.size(); i++) {
+    float colVal = stoi(rawValues[i]);
+    if (colVal == value) {
+      return i;
+    }
+  }
+  return -1;
+};
+
+void Table::flushTable(){
+  data.clear();
+  columns = 0;
+  rows = 0;
 };

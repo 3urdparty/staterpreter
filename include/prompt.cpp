@@ -5,22 +5,15 @@
 #include <iomanip>
 #include <iostream>
 #include <vector>
+
+#include "utilities.hpp"
 using namespace std;
 
-
 vector<string> parseArgs(string str) {
-  vector<string> output;
-  string buffer = "";
-  for (int x = 0; x <= str.length(); x++) {
-    if (str[x] == ' ') {
-      if (buffer != "") output.push_back(buffer);
-      buffer = "";
-    } else {
-      buffer += str[x];
-    }
-  }
-  output.push_back(buffer);
-  return output;
+  vector<string> args = splitString(str, ' ');
+  args = sanitizeStrings(args);
+  int n = args.size();
+  return args;
 }
 
 void outputBanner() {

@@ -41,8 +41,9 @@ class Column {
   float getStdDeviation();
   tuple<float, float> getRegression();
   vector<string> getAllValues();
-  void deleteOccurrenceInColumn(int value);
-  void deleteOccurrenceInColumn(string value);
+  void deleteRow(int rowIndex);
+  void insertAtRowIndex(int rowIndex, string value);
+
  private:
   int index;
   string header;

@@ -17,6 +17,8 @@ using namespace std;
 
 // Struct to store table
 int main(int argc, char const *argv[]) {
+  // cout << stringIsFloat("   10   ");
+  // return 0;
   Table currentTable;
   bool tableLoaded = false;
 
@@ -26,7 +28,7 @@ int main(int argc, char const *argv[]) {
   while (true) {
     vector<string> args;
     // test
-    args = parseArgs("help");
+
     // helpCMD();
     // return 0;
     // test
@@ -99,7 +101,6 @@ int main(int argc, char const *argv[]) {
           primesCMD(args, currentTable, tableLoaded);
         } else if (cmpstr(args[0], "delete")) {
           deleteCMD(args, currentTable, tableLoaded);
-
         } else if (cmpstr(args[0], "insert")) {
           insertRowCMD(args, currentTable, tableLoaded);
         } else if (cmpstr(args[0], "replace")) {

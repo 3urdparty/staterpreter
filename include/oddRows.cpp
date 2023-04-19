@@ -14,23 +14,26 @@ void oddRowsCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
     vector<string> headers = currentTable.getAllColumnHeaders();
     int cols = currentTable.getNumberOfColumns();
     int rows = currentTable.getNumberOfRows();
-    cout << "+" << setfill('=') << setw(16 * cols - 1) << "" << setw(1)
+    cout << "+" << setfill('=') << setw(8) << "" << setw(1)
          << setfill(' ') << "+" << endl;
 
     cout << "|";
 
     for (string header : headers) {
-      cout << bold << colorfmt(fg::green) << header << left << setw(8) << "\t"
-           << "\t" << clearfmt;
+      cout << bold << colorfmt(fg::green) << left << header << setw(8)
+           << clearfmt << "\t"
+           << "|";
     };
-    cout << "|" << endl;
-
+    cout << endl;
     for (int x = 0; x < rows; x += 2) {
       vector<string> rawValues = currentTable.getAllValuesInRow(x);
-      cout << join(rawValues, "  |  ");
+      cout << "|";
+      for (int x = 0; x < rawValues.size(); x++) {
+        cout << setw(8) << rawValues[x] << "\t" << "|";
+      }
       cout << endl;
     };
-    cout << "+" << setfill('=') << setw(16 * cols - 1) << "" << setw(1)
+    cout << "+" << setfill('=') << setw(8) << "" << setw(1)
          << setfill(' ') << "+" << endl;
   }
 
