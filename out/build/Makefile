@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/theycallmemuzz/Code/staterpreter
+CMAKE_SOURCE_DIR = /Users/theycallmemuzz/Code/stat
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/theycallmemuzz/Code/staterpreter/out/build
+CMAKE_BINARY_DIR = /Users/theycallmemuzz/Code/stat/out/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -85,56 +85,11 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/Applications/CMake.app/Contents/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/Applications/CMake.app/Contents/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles /Users/theycallmemuzz/Code/staterpreter/out/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theycallmemuzz/Code/stat/out/build/CMakeFiles /Users/theycallmemuzz/Code/stat/out/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theycallmemuzz/Code/stat/out/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -175,17 +130,43 @@ staterpreter/fast:
 .PHONY : staterpreter/fast
 
 #=============================================================================
-# Target rules for targets named utilities
+# Target rules for targets named terminal
 
 # Build rule for target.
-utilities: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utilities
-.PHONY : utilities
+terminal: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 terminal
+.PHONY : terminal
 
 # fast build rule for target.
-utilities/fast:
-	$(MAKE) $(MAKESILENT) -f include/utilities/CMakeFiles/utilities.dir/build.make include/utilities/CMakeFiles/utilities.dir/build
-.PHONY : utilities/fast
+terminal/fast:
+	$(MAKE) $(MAKESILENT) -f libs/terminal/CMakeFiles/terminal.dir/build.make libs/terminal/CMakeFiles/terminal.dir/build
+.PHONY : terminal/fast
+
+#=============================================================================
+# Target rules for targets named fileoperations
+
+# Build rule for target.
+fileoperations: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fileoperations
+.PHONY : fileoperations
+
+# fast build rule for target.
+fileoperations/fast:
+	$(MAKE) $(MAKESILENT) -f libs/fileoperations/CMakeFiles/fileoperations.dir/build.make libs/fileoperations/CMakeFiles/fileoperations.dir/build
+.PHONY : fileoperations/fast
+
+#=============================================================================
+# Target rules for targets named strfmt
+
+# Build rule for target.
+strfmt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 strfmt
+.PHONY : strfmt
+
+# fast build rule for target.
+strfmt/fast:
+	$(MAKE) $(MAKESILENT) -f libs/strfmt/CMakeFiles/strfmt.dir/build.make libs/strfmt/CMakeFiles/strfmt.dir/build
+.PHONY : strfmt/fast
 
 #=============================================================================
 # Target rules for targets named table
@@ -197,47 +178,21 @@ table: cmake_check_build_system
 
 # fast build rule for target.
 table/fast:
-	$(MAKE) $(MAKESILENT) -f include/table/CMakeFiles/table.dir/build.make include/table/CMakeFiles/table.dir/build
+	$(MAKE) $(MAKESILENT) -f libs/table/CMakeFiles/table.dir/build.make libs/table/CMakeFiles/table.dir/build
 .PHONY : table/fast
 
 #=============================================================================
-# Target rules for targets named commands
+# Target rules for targets named statistical
 
 # Build rule for target.
-commands: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 commands
-.PHONY : commands
+statistical: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 statistical
+.PHONY : statistical
 
 # fast build rule for target.
-commands/fast:
-	$(MAKE) $(MAKESILENT) -f include/commands/CMakeFiles/commands.dir/build.make include/commands/CMakeFiles/commands.dir/build
-.PHONY : commands/fast
-
-#=============================================================================
-# Target rules for targets named prompt
-
-# Build rule for target.
-prompt: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prompt
-.PHONY : prompt
-
-# fast build rule for target.
-prompt/fast:
-	$(MAKE) $(MAKESILENT) -f include/prompt/CMakeFiles/prompt.dir/build.make include/prompt/CMakeFiles/prompt.dir/build
-.PHONY : prompt/fast
-
-#=============================================================================
-# Target rules for targets named stats
-
-# Build rule for target.
-stats: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stats
-.PHONY : stats
-
-# fast build rule for target.
-stats/fast:
-	$(MAKE) $(MAKESILENT) -f include/stats/CMakeFiles/stats.dir/build.make include/stats/CMakeFiles/stats.dir/build
-.PHONY : stats/fast
+statistical/fast:
+	$(MAKE) $(MAKESILENT) -f libs/statistical/CMakeFiles/statistical.dir/build.make libs/statistical/CMakeFiles/statistical.dir/build
+.PHONY : statistical/fast
 
 #=============================================================================
 # Target rules for targets named histogram
@@ -249,32 +204,776 @@ histogram: cmake_check_build_system
 
 # fast build rule for target.
 histogram/fast:
-	$(MAKE) $(MAKESILENT) -f include/histogram/CMakeFiles/histogram.dir/build.make include/histogram/CMakeFiles/histogram.dir/build
+	$(MAKE) $(MAKESILENT) -f libs/histogram/CMakeFiles/histogram.dir/build.make libs/histogram/CMakeFiles/histogram.dir/build
 .PHONY : histogram/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/commands/addCMD.o: src/commands/addCMD.cpp.o
+.PHONY : src/commands/addCMD.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/commands/addCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/addCMD.cpp.o
+.PHONY : src/commands/addCMD.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/commands/addCMD.i: src/commands/addCMD.cpp.i
+.PHONY : src/commands/addCMD.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/commands/addCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/addCMD.cpp.i
+.PHONY : src/commands/addCMD.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/commands/addCMD.s: src/commands/addCMD.cpp.s
+.PHONY : src/commands/addCMD.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/commands/addCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/addCMD.cpp.s
+.PHONY : src/commands/addCMD.cpp.s
+
+src/commands/cloneFileCMD.o: src/commands/cloneFileCMD.cpp.o
+.PHONY : src/commands/cloneFileCMD.o
+
+# target to build an object file
+src/commands/cloneFileCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/cloneFileCMD.cpp.o
+.PHONY : src/commands/cloneFileCMD.cpp.o
+
+src/commands/cloneFileCMD.i: src/commands/cloneFileCMD.cpp.i
+.PHONY : src/commands/cloneFileCMD.i
+
+# target to preprocess a source file
+src/commands/cloneFileCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/cloneFileCMD.cpp.i
+.PHONY : src/commands/cloneFileCMD.cpp.i
+
+src/commands/cloneFileCMD.s: src/commands/cloneFileCMD.cpp.s
+.PHONY : src/commands/cloneFileCMD.s
+
+# target to generate assembly for a file
+src/commands/cloneFileCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/cloneFileCMD.cpp.s
+.PHONY : src/commands/cloneFileCMD.cpp.s
+
+src/commands/columnsCMD.o: src/commands/columnsCMD.cpp.o
+.PHONY : src/commands/columnsCMD.o
+
+# target to build an object file
+src/commands/columnsCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/columnsCMD.cpp.o
+.PHONY : src/commands/columnsCMD.cpp.o
+
+src/commands/columnsCMD.i: src/commands/columnsCMD.cpp.i
+.PHONY : src/commands/columnsCMD.i
+
+# target to preprocess a source file
+src/commands/columnsCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/columnsCMD.cpp.i
+.PHONY : src/commands/columnsCMD.cpp.i
+
+src/commands/columnsCMD.s: src/commands/columnsCMD.cpp.s
+.PHONY : src/commands/columnsCMD.s
+
+# target to generate assembly for a file
+src/commands/columnsCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/columnsCMD.cpp.s
+.PHONY : src/commands/columnsCMD.cpp.s
+
+src/commands/corrCMD.o: src/commands/corrCMD.cpp.o
+.PHONY : src/commands/corrCMD.o
+
+# target to build an object file
+src/commands/corrCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/corrCMD.cpp.o
+.PHONY : src/commands/corrCMD.cpp.o
+
+src/commands/corrCMD.i: src/commands/corrCMD.cpp.i
+.PHONY : src/commands/corrCMD.i
+
+# target to preprocess a source file
+src/commands/corrCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/corrCMD.cpp.i
+.PHONY : src/commands/corrCMD.cpp.i
+
+src/commands/corrCMD.s: src/commands/corrCMD.cpp.s
+.PHONY : src/commands/corrCMD.s
+
+# target to generate assembly for a file
+src/commands/corrCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/corrCMD.cpp.s
+.PHONY : src/commands/corrCMD.cpp.s
+
+src/commands/deleteCMD.o: src/commands/deleteCMD.cpp.o
+.PHONY : src/commands/deleteCMD.o
+
+# target to build an object file
+src/commands/deleteCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/deleteCMD.cpp.o
+.PHONY : src/commands/deleteCMD.cpp.o
+
+src/commands/deleteCMD.i: src/commands/deleteCMD.cpp.i
+.PHONY : src/commands/deleteCMD.i
+
+# target to preprocess a source file
+src/commands/deleteCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/deleteCMD.cpp.i
+.PHONY : src/commands/deleteCMD.cpp.i
+
+src/commands/deleteCMD.s: src/commands/deleteCMD.cpp.s
+.PHONY : src/commands/deleteCMD.s
+
+# target to generate assembly for a file
+src/commands/deleteCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/deleteCMD.cpp.s
+.PHONY : src/commands/deleteCMD.cpp.s
+
+src/commands/evenRowsCMD.o: src/commands/evenRowsCMD.cpp.o
+.PHONY : src/commands/evenRowsCMD.o
+
+# target to build an object file
+src/commands/evenRowsCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/evenRowsCMD.cpp.o
+.PHONY : src/commands/evenRowsCMD.cpp.o
+
+src/commands/evenRowsCMD.i: src/commands/evenRowsCMD.cpp.i
+.PHONY : src/commands/evenRowsCMD.i
+
+# target to preprocess a source file
+src/commands/evenRowsCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/evenRowsCMD.cpp.i
+.PHONY : src/commands/evenRowsCMD.cpp.i
+
+src/commands/evenRowsCMD.s: src/commands/evenRowsCMD.cpp.s
+.PHONY : src/commands/evenRowsCMD.s
+
+# target to generate assembly for a file
+src/commands/evenRowsCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/evenRowsCMD.cpp.s
+.PHONY : src/commands/evenRowsCMD.cpp.s
+
+src/commands/generateHTMLCMD.o: src/commands/generateHTMLCMD.cpp.o
+.PHONY : src/commands/generateHTMLCMD.o
+
+# target to build an object file
+src/commands/generateHTMLCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/generateHTMLCMD.cpp.o
+.PHONY : src/commands/generateHTMLCMD.cpp.o
+
+src/commands/generateHTMLCMD.i: src/commands/generateHTMLCMD.cpp.i
+.PHONY : src/commands/generateHTMLCMD.i
+
+# target to preprocess a source file
+src/commands/generateHTMLCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/generateHTMLCMD.cpp.i
+.PHONY : src/commands/generateHTMLCMD.cpp.i
+
+src/commands/generateHTMLCMD.s: src/commands/generateHTMLCMD.cpp.s
+.PHONY : src/commands/generateHTMLCMD.s
+
+# target to generate assembly for a file
+src/commands/generateHTMLCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/generateHTMLCMD.cpp.s
+.PHONY : src/commands/generateHTMLCMD.cpp.s
+
+src/commands/helpCMD.o: src/commands/helpCMD.cpp.o
+.PHONY : src/commands/helpCMD.o
+
+# target to build an object file
+src/commands/helpCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/helpCMD.cpp.o
+.PHONY : src/commands/helpCMD.cpp.o
+
+src/commands/helpCMD.i: src/commands/helpCMD.cpp.i
+.PHONY : src/commands/helpCMD.i
+
+# target to preprocess a source file
+src/commands/helpCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/helpCMD.cpp.i
+.PHONY : src/commands/helpCMD.cpp.i
+
+src/commands/helpCMD.s: src/commands/helpCMD.cpp.s
+.PHONY : src/commands/helpCMD.s
+
+# target to generate assembly for a file
+src/commands/helpCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/helpCMD.cpp.s
+.PHONY : src/commands/helpCMD.cpp.s
+
+src/commands/hhistoCMD.o: src/commands/hhistoCMD.cpp.o
+.PHONY : src/commands/hhistoCMD.o
+
+# target to build an object file
+src/commands/hhistoCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/hhistoCMD.cpp.o
+.PHONY : src/commands/hhistoCMD.cpp.o
+
+src/commands/hhistoCMD.i: src/commands/hhistoCMD.cpp.i
+.PHONY : src/commands/hhistoCMD.i
+
+# target to preprocess a source file
+src/commands/hhistoCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/hhistoCMD.cpp.i
+.PHONY : src/commands/hhistoCMD.cpp.i
+
+src/commands/hhistoCMD.s: src/commands/hhistoCMD.cpp.s
+.PHONY : src/commands/hhistoCMD.s
+
+# target to generate assembly for a file
+src/commands/hhistoCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/hhistoCMD.cpp.s
+.PHONY : src/commands/hhistoCMD.cpp.s
+
+src/commands/insertRowCMD.o: src/commands/insertRowCMD.cpp.o
+.PHONY : src/commands/insertRowCMD.o
+
+# target to build an object file
+src/commands/insertRowCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/insertRowCMD.cpp.o
+.PHONY : src/commands/insertRowCMD.cpp.o
+
+src/commands/insertRowCMD.i: src/commands/insertRowCMD.cpp.i
+.PHONY : src/commands/insertRowCMD.i
+
+# target to preprocess a source file
+src/commands/insertRowCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/insertRowCMD.cpp.i
+.PHONY : src/commands/insertRowCMD.cpp.i
+
+src/commands/insertRowCMD.s: src/commands/insertRowCMD.cpp.s
+.PHONY : src/commands/insertRowCMD.s
+
+# target to generate assembly for a file
+src/commands/insertRowCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/insertRowCMD.cpp.s
+.PHONY : src/commands/insertRowCMD.cpp.s
+
+src/commands/loadFileCMD.o: src/commands/loadFileCMD.cpp.o
+.PHONY : src/commands/loadFileCMD.o
+
+# target to build an object file
+src/commands/loadFileCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/loadFileCMD.cpp.o
+.PHONY : src/commands/loadFileCMD.cpp.o
+
+src/commands/loadFileCMD.i: src/commands/loadFileCMD.cpp.i
+.PHONY : src/commands/loadFileCMD.i
+
+# target to preprocess a source file
+src/commands/loadFileCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/loadFileCMD.cpp.i
+.PHONY : src/commands/loadFileCMD.cpp.i
+
+src/commands/loadFileCMD.s: src/commands/loadFileCMD.cpp.s
+.PHONY : src/commands/loadFileCMD.s
+
+# target to generate assembly for a file
+src/commands/loadFileCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/loadFileCMD.cpp.s
+.PHONY : src/commands/loadFileCMD.cpp.s
+
+src/commands/manCMD.o: src/commands/manCMD.cpp.o
+.PHONY : src/commands/manCMD.o
+
+# target to build an object file
+src/commands/manCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/manCMD.cpp.o
+.PHONY : src/commands/manCMD.cpp.o
+
+src/commands/manCMD.i: src/commands/manCMD.cpp.i
+.PHONY : src/commands/manCMD.i
+
+# target to preprocess a source file
+src/commands/manCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/manCMD.cpp.i
+.PHONY : src/commands/manCMD.cpp.i
+
+src/commands/manCMD.s: src/commands/manCMD.cpp.s
+.PHONY : src/commands/manCMD.s
+
+# target to generate assembly for a file
+src/commands/manCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/manCMD.cpp.s
+.PHONY : src/commands/manCMD.cpp.s
+
+src/commands/maxCMD.o: src/commands/maxCMD.cpp.o
+.PHONY : src/commands/maxCMD.o
+
+# target to build an object file
+src/commands/maxCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/maxCMD.cpp.o
+.PHONY : src/commands/maxCMD.cpp.o
+
+src/commands/maxCMD.i: src/commands/maxCMD.cpp.i
+.PHONY : src/commands/maxCMD.i
+
+# target to preprocess a source file
+src/commands/maxCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/maxCMD.cpp.i
+.PHONY : src/commands/maxCMD.cpp.i
+
+src/commands/maxCMD.s: src/commands/maxCMD.cpp.s
+.PHONY : src/commands/maxCMD.s
+
+# target to generate assembly for a file
+src/commands/maxCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/maxCMD.cpp.s
+.PHONY : src/commands/maxCMD.cpp.s
+
+src/commands/meanCMD.o: src/commands/meanCMD.cpp.o
+.PHONY : src/commands/meanCMD.o
+
+# target to build an object file
+src/commands/meanCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/meanCMD.cpp.o
+.PHONY : src/commands/meanCMD.cpp.o
+
+src/commands/meanCMD.i: src/commands/meanCMD.cpp.i
+.PHONY : src/commands/meanCMD.i
+
+# target to preprocess a source file
+src/commands/meanCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/meanCMD.cpp.i
+.PHONY : src/commands/meanCMD.cpp.i
+
+src/commands/meanCMD.s: src/commands/meanCMD.cpp.s
+.PHONY : src/commands/meanCMD.s
+
+# target to generate assembly for a file
+src/commands/meanCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/meanCMD.cpp.s
+.PHONY : src/commands/meanCMD.cpp.s
+
+src/commands/medianCMD.o: src/commands/medianCMD.cpp.o
+.PHONY : src/commands/medianCMD.o
+
+# target to build an object file
+src/commands/medianCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/medianCMD.cpp.o
+.PHONY : src/commands/medianCMD.cpp.o
+
+src/commands/medianCMD.i: src/commands/medianCMD.cpp.i
+.PHONY : src/commands/medianCMD.i
+
+# target to preprocess a source file
+src/commands/medianCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/medianCMD.cpp.i
+.PHONY : src/commands/medianCMD.cpp.i
+
+src/commands/medianCMD.s: src/commands/medianCMD.cpp.s
+.PHONY : src/commands/medianCMD.s
+
+# target to generate assembly for a file
+src/commands/medianCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/medianCMD.cpp.s
+.PHONY : src/commands/medianCMD.cpp.s
+
+src/commands/minCMD.o: src/commands/minCMD.cpp.o
+.PHONY : src/commands/minCMD.o
+
+# target to build an object file
+src/commands/minCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/minCMD.cpp.o
+.PHONY : src/commands/minCMD.cpp.o
+
+src/commands/minCMD.i: src/commands/minCMD.cpp.i
+.PHONY : src/commands/minCMD.i
+
+# target to preprocess a source file
+src/commands/minCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/minCMD.cpp.i
+.PHONY : src/commands/minCMD.cpp.i
+
+src/commands/minCMD.s: src/commands/minCMD.cpp.s
+.PHONY : src/commands/minCMD.s
+
+# target to generate assembly for a file
+src/commands/minCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/minCMD.cpp.s
+.PHONY : src/commands/minCMD.cpp.s
+
+src/commands/oddRowsCMD.o: src/commands/oddRowsCMD.cpp.o
+.PHONY : src/commands/oddRowsCMD.o
+
+# target to build an object file
+src/commands/oddRowsCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/oddRowsCMD.cpp.o
+.PHONY : src/commands/oddRowsCMD.cpp.o
+
+src/commands/oddRowsCMD.i: src/commands/oddRowsCMD.cpp.i
+.PHONY : src/commands/oddRowsCMD.i
+
+# target to preprocess a source file
+src/commands/oddRowsCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/oddRowsCMD.cpp.i
+.PHONY : src/commands/oddRowsCMD.cpp.i
+
+src/commands/oddRowsCMD.s: src/commands/oddRowsCMD.cpp.s
+.PHONY : src/commands/oddRowsCMD.s
+
+# target to generate assembly for a file
+src/commands/oddRowsCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/oddRowsCMD.cpp.s
+.PHONY : src/commands/oddRowsCMD.cpp.s
+
+src/commands/primesCMD.o: src/commands/primesCMD.cpp.o
+.PHONY : src/commands/primesCMD.o
+
+# target to build an object file
+src/commands/primesCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/primesCMD.cpp.o
+.PHONY : src/commands/primesCMD.cpp.o
+
+src/commands/primesCMD.i: src/commands/primesCMD.cpp.i
+.PHONY : src/commands/primesCMD.i
+
+# target to preprocess a source file
+src/commands/primesCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/primesCMD.cpp.i
+.PHONY : src/commands/primesCMD.cpp.i
+
+src/commands/primesCMD.s: src/commands/primesCMD.cpp.s
+.PHONY : src/commands/primesCMD.s
+
+# target to generate assembly for a file
+src/commands/primesCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/primesCMD.cpp.s
+.PHONY : src/commands/primesCMD.cpp.s
+
+src/commands/regressionCMD.o: src/commands/regressionCMD.cpp.o
+.PHONY : src/commands/regressionCMD.o
+
+# target to build an object file
+src/commands/regressionCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/regressionCMD.cpp.o
+.PHONY : src/commands/regressionCMD.cpp.o
+
+src/commands/regressionCMD.i: src/commands/regressionCMD.cpp.i
+.PHONY : src/commands/regressionCMD.i
+
+# target to preprocess a source file
+src/commands/regressionCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/regressionCMD.cpp.i
+.PHONY : src/commands/regressionCMD.cpp.i
+
+src/commands/regressionCMD.s: src/commands/regressionCMD.cpp.s
+.PHONY : src/commands/regressionCMD.s
+
+# target to generate assembly for a file
+src/commands/regressionCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/regressionCMD.cpp.s
+.PHONY : src/commands/regressionCMD.cpp.s
+
+src/commands/replaceCMD.o: src/commands/replaceCMD.cpp.o
+.PHONY : src/commands/replaceCMD.o
+
+# target to build an object file
+src/commands/replaceCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/replaceCMD.cpp.o
+.PHONY : src/commands/replaceCMD.cpp.o
+
+src/commands/replaceCMD.i: src/commands/replaceCMD.cpp.i
+.PHONY : src/commands/replaceCMD.i
+
+# target to preprocess a source file
+src/commands/replaceCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/replaceCMD.cpp.i
+.PHONY : src/commands/replaceCMD.cpp.i
+
+src/commands/replaceCMD.s: src/commands/replaceCMD.cpp.s
+.PHONY : src/commands/replaceCMD.s
+
+# target to generate assembly for a file
+src/commands/replaceCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/replaceCMD.cpp.s
+.PHONY : src/commands/replaceCMD.cpp.s
+
+src/commands/reportCMD.o: src/commands/reportCMD.cpp.o
+.PHONY : src/commands/reportCMD.o
+
+# target to build an object file
+src/commands/reportCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/reportCMD.cpp.o
+.PHONY : src/commands/reportCMD.cpp.o
+
+src/commands/reportCMD.i: src/commands/reportCMD.cpp.i
+.PHONY : src/commands/reportCMD.i
+
+# target to preprocess a source file
+src/commands/reportCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/reportCMD.cpp.i
+.PHONY : src/commands/reportCMD.cpp.i
+
+src/commands/reportCMD.s: src/commands/reportCMD.cpp.s
+.PHONY : src/commands/reportCMD.s
+
+# target to generate assembly for a file
+src/commands/reportCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/reportCMD.cpp.s
+.PHONY : src/commands/reportCMD.cpp.s
+
+src/commands/rowsCMD.o: src/commands/rowsCMD.cpp.o
+.PHONY : src/commands/rowsCMD.o
+
+# target to build an object file
+src/commands/rowsCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/rowsCMD.cpp.o
+.PHONY : src/commands/rowsCMD.cpp.o
+
+src/commands/rowsCMD.i: src/commands/rowsCMD.cpp.i
+.PHONY : src/commands/rowsCMD.i
+
+# target to preprocess a source file
+src/commands/rowsCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/rowsCMD.cpp.i
+.PHONY : src/commands/rowsCMD.cpp.i
+
+src/commands/rowsCMD.s: src/commands/rowsCMD.cpp.s
+.PHONY : src/commands/rowsCMD.s
+
+# target to generate assembly for a file
+src/commands/rowsCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/rowsCMD.cpp.s
+.PHONY : src/commands/rowsCMD.cpp.s
+
+src/commands/showCMD.o: src/commands/showCMD.cpp.o
+.PHONY : src/commands/showCMD.o
+
+# target to build an object file
+src/commands/showCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/showCMD.cpp.o
+.PHONY : src/commands/showCMD.cpp.o
+
+src/commands/showCMD.i: src/commands/showCMD.cpp.i
+.PHONY : src/commands/showCMD.i
+
+# target to preprocess a source file
+src/commands/showCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/showCMD.cpp.i
+.PHONY : src/commands/showCMD.cpp.i
+
+src/commands/showCMD.s: src/commands/showCMD.cpp.s
+.PHONY : src/commands/showCMD.s
+
+# target to generate assembly for a file
+src/commands/showCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/showCMD.cpp.s
+.PHONY : src/commands/showCMD.cpp.s
+
+src/commands/sortCMD.o: src/commands/sortCMD.cpp.o
+.PHONY : src/commands/sortCMD.o
+
+# target to build an object file
+src/commands/sortCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/sortCMD.cpp.o
+.PHONY : src/commands/sortCMD.cpp.o
+
+src/commands/sortCMD.i: src/commands/sortCMD.cpp.i
+.PHONY : src/commands/sortCMD.i
+
+# target to preprocess a source file
+src/commands/sortCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/sortCMD.cpp.i
+.PHONY : src/commands/sortCMD.cpp.i
+
+src/commands/sortCMD.s: src/commands/sortCMD.cpp.s
+.PHONY : src/commands/sortCMD.s
+
+# target to generate assembly for a file
+src/commands/sortCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/sortCMD.cpp.s
+.PHONY : src/commands/sortCMD.cpp.s
+
+src/commands/stdvCMD.o: src/commands/stdvCMD.cpp.o
+.PHONY : src/commands/stdvCMD.o
+
+# target to build an object file
+src/commands/stdvCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/stdvCMD.cpp.o
+.PHONY : src/commands/stdvCMD.cpp.o
+
+src/commands/stdvCMD.i: src/commands/stdvCMD.cpp.i
+.PHONY : src/commands/stdvCMD.i
+
+# target to preprocess a source file
+src/commands/stdvCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/stdvCMD.cpp.i
+.PHONY : src/commands/stdvCMD.cpp.i
+
+src/commands/stdvCMD.s: src/commands/stdvCMD.cpp.s
+.PHONY : src/commands/stdvCMD.s
+
+# target to generate assembly for a file
+src/commands/stdvCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/stdvCMD.cpp.s
+.PHONY : src/commands/stdvCMD.cpp.s
+
+src/commands/storeFileCMD.o: src/commands/storeFileCMD.cpp.o
+.PHONY : src/commands/storeFileCMD.o
+
+# target to build an object file
+src/commands/storeFileCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/storeFileCMD.cpp.o
+.PHONY : src/commands/storeFileCMD.cpp.o
+
+src/commands/storeFileCMD.i: src/commands/storeFileCMD.cpp.i
+.PHONY : src/commands/storeFileCMD.i
+
+# target to preprocess a source file
+src/commands/storeFileCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/storeFileCMD.cpp.i
+.PHONY : src/commands/storeFileCMD.cpp.i
+
+src/commands/storeFileCMD.s: src/commands/storeFileCMD.cpp.s
+.PHONY : src/commands/storeFileCMD.s
+
+# target to generate assembly for a file
+src/commands/storeFileCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/storeFileCMD.cpp.s
+.PHONY : src/commands/storeFileCMD.cpp.s
+
+src/commands/subCMD.o: src/commands/subCMD.cpp.o
+.PHONY : src/commands/subCMD.o
+
+# target to build an object file
+src/commands/subCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/subCMD.cpp.o
+.PHONY : src/commands/subCMD.cpp.o
+
+src/commands/subCMD.i: src/commands/subCMD.cpp.i
+.PHONY : src/commands/subCMD.i
+
+# target to preprocess a source file
+src/commands/subCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/subCMD.cpp.i
+.PHONY : src/commands/subCMD.cpp.i
+
+src/commands/subCMD.s: src/commands/subCMD.cpp.s
+.PHONY : src/commands/subCMD.s
+
+# target to generate assembly for a file
+src/commands/subCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/subCMD.cpp.s
+.PHONY : src/commands/subCMD.cpp.s
+
+src/commands/titlesCMD.o: src/commands/titlesCMD.cpp.o
+.PHONY : src/commands/titlesCMD.o
+
+# target to build an object file
+src/commands/titlesCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/titlesCMD.cpp.o
+.PHONY : src/commands/titlesCMD.cpp.o
+
+src/commands/titlesCMD.i: src/commands/titlesCMD.cpp.i
+.PHONY : src/commands/titlesCMD.i
+
+# target to preprocess a source file
+src/commands/titlesCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/titlesCMD.cpp.i
+.PHONY : src/commands/titlesCMD.cpp.i
+
+src/commands/titlesCMD.s: src/commands/titlesCMD.cpp.s
+.PHONY : src/commands/titlesCMD.s
+
+# target to generate assembly for a file
+src/commands/titlesCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/titlesCMD.cpp.s
+.PHONY : src/commands/titlesCMD.cpp.s
+
+src/commands/varianceCMD.o: src/commands/varianceCMD.cpp.o
+.PHONY : src/commands/varianceCMD.o
+
+# target to build an object file
+src/commands/varianceCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/varianceCMD.cpp.o
+.PHONY : src/commands/varianceCMD.cpp.o
+
+src/commands/varianceCMD.i: src/commands/varianceCMD.cpp.i
+.PHONY : src/commands/varianceCMD.i
+
+# target to preprocess a source file
+src/commands/varianceCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/varianceCMD.cpp.i
+.PHONY : src/commands/varianceCMD.cpp.i
+
+src/commands/varianceCMD.s: src/commands/varianceCMD.cpp.s
+.PHONY : src/commands/varianceCMD.s
+
+# target to generate assembly for a file
+src/commands/varianceCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/varianceCMD.cpp.s
+.PHONY : src/commands/varianceCMD.cpp.s
+
+src/commands/vhistoCMD.o: src/commands/vhistoCMD.cpp.o
+.PHONY : src/commands/vhistoCMD.o
+
+# target to build an object file
+src/commands/vhistoCMD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/vhistoCMD.cpp.o
+.PHONY : src/commands/vhistoCMD.cpp.o
+
+src/commands/vhistoCMD.i: src/commands/vhistoCMD.cpp.i
+.PHONY : src/commands/vhistoCMD.i
+
+# target to preprocess a source file
+src/commands/vhistoCMD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/vhistoCMD.cpp.i
+.PHONY : src/commands/vhistoCMD.cpp.i
+
+src/commands/vhistoCMD.s: src/commands/vhistoCMD.cpp.s
+.PHONY : src/commands/vhistoCMD.s
+
+# target to generate assembly for a file
+src/commands/vhistoCMD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/commands/vhistoCMD.cpp.s
+.PHONY : src/commands/vhistoCMD.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/prompt/prompt.o: src/prompt/prompt.cpp.o
+.PHONY : src/prompt/prompt.o
+
+# target to build an object file
+src/prompt/prompt.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/prompt/prompt.cpp.o
+.PHONY : src/prompt/prompt.cpp.o
+
+src/prompt/prompt.i: src/prompt/prompt.cpp.i
+.PHONY : src/prompt/prompt.i
+
+# target to preprocess a source file
+src/prompt/prompt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/prompt/prompt.cpp.i
+.PHONY : src/prompt/prompt.cpp.i
+
+src/prompt/prompt.s: src/prompt/prompt.cpp.s
+.PHONY : src/prompt/prompt.s
+
+# target to generate assembly for a file
+src/prompt/prompt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/src/prompt/prompt.cpp.s
+.PHONY : src/prompt/prompt.cpp.s
 
 # Help Target
 help:
@@ -283,21 +982,110 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... commands"
+	@echo "... fileoperations"
 	@echo "... histogram"
-	@echo "... prompt"
 	@echo "... staterpreter"
-	@echo "... stats"
+	@echo "... statistical"
+	@echo "... strfmt"
 	@echo "... table"
-	@echo "... utilities"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... terminal"
+	@echo "... src/commands/addCMD.o"
+	@echo "... src/commands/addCMD.i"
+	@echo "... src/commands/addCMD.s"
+	@echo "... src/commands/cloneFileCMD.o"
+	@echo "... src/commands/cloneFileCMD.i"
+	@echo "... src/commands/cloneFileCMD.s"
+	@echo "... src/commands/columnsCMD.o"
+	@echo "... src/commands/columnsCMD.i"
+	@echo "... src/commands/columnsCMD.s"
+	@echo "... src/commands/corrCMD.o"
+	@echo "... src/commands/corrCMD.i"
+	@echo "... src/commands/corrCMD.s"
+	@echo "... src/commands/deleteCMD.o"
+	@echo "... src/commands/deleteCMD.i"
+	@echo "... src/commands/deleteCMD.s"
+	@echo "... src/commands/evenRowsCMD.o"
+	@echo "... src/commands/evenRowsCMD.i"
+	@echo "... src/commands/evenRowsCMD.s"
+	@echo "... src/commands/generateHTMLCMD.o"
+	@echo "... src/commands/generateHTMLCMD.i"
+	@echo "... src/commands/generateHTMLCMD.s"
+	@echo "... src/commands/helpCMD.o"
+	@echo "... src/commands/helpCMD.i"
+	@echo "... src/commands/helpCMD.s"
+	@echo "... src/commands/hhistoCMD.o"
+	@echo "... src/commands/hhistoCMD.i"
+	@echo "... src/commands/hhistoCMD.s"
+	@echo "... src/commands/insertRowCMD.o"
+	@echo "... src/commands/insertRowCMD.i"
+	@echo "... src/commands/insertRowCMD.s"
+	@echo "... src/commands/loadFileCMD.o"
+	@echo "... src/commands/loadFileCMD.i"
+	@echo "... src/commands/loadFileCMD.s"
+	@echo "... src/commands/manCMD.o"
+	@echo "... src/commands/manCMD.i"
+	@echo "... src/commands/manCMD.s"
+	@echo "... src/commands/maxCMD.o"
+	@echo "... src/commands/maxCMD.i"
+	@echo "... src/commands/maxCMD.s"
+	@echo "... src/commands/meanCMD.o"
+	@echo "... src/commands/meanCMD.i"
+	@echo "... src/commands/meanCMD.s"
+	@echo "... src/commands/medianCMD.o"
+	@echo "... src/commands/medianCMD.i"
+	@echo "... src/commands/medianCMD.s"
+	@echo "... src/commands/minCMD.o"
+	@echo "... src/commands/minCMD.i"
+	@echo "... src/commands/minCMD.s"
+	@echo "... src/commands/oddRowsCMD.o"
+	@echo "... src/commands/oddRowsCMD.i"
+	@echo "... src/commands/oddRowsCMD.s"
+	@echo "... src/commands/primesCMD.o"
+	@echo "... src/commands/primesCMD.i"
+	@echo "... src/commands/primesCMD.s"
+	@echo "... src/commands/regressionCMD.o"
+	@echo "... src/commands/regressionCMD.i"
+	@echo "... src/commands/regressionCMD.s"
+	@echo "... src/commands/replaceCMD.o"
+	@echo "... src/commands/replaceCMD.i"
+	@echo "... src/commands/replaceCMD.s"
+	@echo "... src/commands/reportCMD.o"
+	@echo "... src/commands/reportCMD.i"
+	@echo "... src/commands/reportCMD.s"
+	@echo "... src/commands/rowsCMD.o"
+	@echo "... src/commands/rowsCMD.i"
+	@echo "... src/commands/rowsCMD.s"
+	@echo "... src/commands/showCMD.o"
+	@echo "... src/commands/showCMD.i"
+	@echo "... src/commands/showCMD.s"
+	@echo "... src/commands/sortCMD.o"
+	@echo "... src/commands/sortCMD.i"
+	@echo "... src/commands/sortCMD.s"
+	@echo "... src/commands/stdvCMD.o"
+	@echo "... src/commands/stdvCMD.i"
+	@echo "... src/commands/stdvCMD.s"
+	@echo "... src/commands/storeFileCMD.o"
+	@echo "... src/commands/storeFileCMD.i"
+	@echo "... src/commands/storeFileCMD.s"
+	@echo "... src/commands/subCMD.o"
+	@echo "... src/commands/subCMD.i"
+	@echo "... src/commands/subCMD.s"
+	@echo "... src/commands/titlesCMD.o"
+	@echo "... src/commands/titlesCMD.i"
+	@echo "... src/commands/titlesCMD.s"
+	@echo "... src/commands/varianceCMD.o"
+	@echo "... src/commands/varianceCMD.i"
+	@echo "... src/commands/varianceCMD.s"
+	@echo "... src/commands/vhistoCMD.o"
+	@echo "... src/commands/vhistoCMD.i"
+	@echo "... src/commands/vhistoCMD.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/prompt/prompt.o"
+	@echo "... src/prompt/prompt.i"
+	@echo "... src/prompt/prompt.s"
 .PHONY : help
 
 

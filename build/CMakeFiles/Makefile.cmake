@@ -28,16 +28,16 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CMake.app/Contents/share/cmake-3.26/Modules/Platform/Darwin-Initialize.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.26/Modules/Platform/Darwin.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.26/Modules/Platform/UnixPaths.cmake"
-  "/Users/theycallmemuzz/Code/staterpreter/CMakeLists.txt"
+  "/Users/theycallmemuzz/Code/statsi/CMakeLists.txt"
   "CMakeFiles/3.26.0/CMakeCCompiler.cmake"
   "CMakeFiles/3.26.0/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.26.0/CMakeSystem.cmake"
-  "/Users/theycallmemuzz/Code/staterpreter/include/commands/CMakeLists.txt"
-  "/Users/theycallmemuzz/Code/staterpreter/include/histogram/CMakeLists.txt"
-  "/Users/theycallmemuzz/Code/staterpreter/include/prompt/CMakeLists.txt"
-  "/Users/theycallmemuzz/Code/staterpreter/include/stats/CMakeLists.txt"
-  "/Users/theycallmemuzz/Code/staterpreter/include/table/CMakeLists.txt"
-  "/Users/theycallmemuzz/Code/staterpreter/include/utilities/CMakeLists.txt"
+  "/Users/theycallmemuzz/Code/statsi/libs/fileoperations/CMakeLists.txt"
+  "/Users/theycallmemuzz/Code/statsi/libs/histogram/CMakeLists.txt"
+  "/Users/theycallmemuzz/Code/statsi/libs/statistical/CMakeLists.txt"
+  "/Users/theycallmemuzz/Code/statsi/libs/strfmt/CMakeLists.txt"
+  "/Users/theycallmemuzz/Code/statsi/libs/table/CMakeLists.txt"
+  "/Users/theycallmemuzz/Code/statsi/libs/terminal/CMakeLists.txt"
   )
 
 # The corresponding makefile is:
@@ -49,21 +49,21 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "include/utilities/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "include/table/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "include/commands/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "include/prompt/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "include/stats/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "include/histogram/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libs/terminal/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libs/fileoperations/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libs/strfmt/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libs/table/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libs/statistical/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libs/histogram/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/staterpreter.dir/DependInfo.cmake"
-  "include/utilities/CMakeFiles/utilities.dir/DependInfo.cmake"
-  "include/table/CMakeFiles/table.dir/DependInfo.cmake"
-  "include/commands/CMakeFiles/commands.dir/DependInfo.cmake"
-  "include/prompt/CMakeFiles/prompt.dir/DependInfo.cmake"
-  "include/stats/CMakeFiles/stats.dir/DependInfo.cmake"
-  "include/histogram/CMakeFiles/histogram.dir/DependInfo.cmake"
+  "libs/terminal/CMakeFiles/terminal.dir/DependInfo.cmake"
+  "libs/fileoperations/CMakeFiles/fileoperations.dir/DependInfo.cmake"
+  "libs/strfmt/CMakeFiles/strfmt.dir/DependInfo.cmake"
+  "libs/table/CMakeFiles/table.dir/DependInfo.cmake"
+  "libs/statistical/CMakeFiles/statistical.dir/DependInfo.cmake"
+  "libs/histogram/CMakeFiles/histogram.dir/DependInfo.cmake"
   )

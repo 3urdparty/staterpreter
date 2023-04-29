@@ -1,4 +1,4 @@
-# Install script for directory: /Users/theycallmemuzz/Code/staterpreter
+# Install script for directory: /Users/theycallmemuzz/Code/statsi
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,33 +38,14 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/theycallmemuzz/Code/staterpreter/build/include/utilities/cmake_install.cmake")
-endif()
+  # Include the install script for each subdirectory.
+  include("/Users/theycallmemuzz/Code/statsi/build/libs/terminal/cmake_install.cmake")
+  include("/Users/theycallmemuzz/Code/statsi/build/libs/fileoperations/cmake_install.cmake")
+  include("/Users/theycallmemuzz/Code/statsi/build/libs/strfmt/cmake_install.cmake")
+  include("/Users/theycallmemuzz/Code/statsi/build/libs/table/cmake_install.cmake")
+  include("/Users/theycallmemuzz/Code/statsi/build/libs/statistical/cmake_install.cmake")
+  include("/Users/theycallmemuzz/Code/statsi/build/libs/histogram/cmake_install.cmake")
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/theycallmemuzz/Code/staterpreter/build/include/table/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/theycallmemuzz/Code/staterpreter/build/include/commands/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/theycallmemuzz/Code/staterpreter/build/include/prompt/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/theycallmemuzz/Code/staterpreter/build/include/stats/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/theycallmemuzz/Code/staterpreter/build/include/histogram/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -75,5 +56,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/theycallmemuzz/Code/staterpreter/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/theycallmemuzz/Code/statsi/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

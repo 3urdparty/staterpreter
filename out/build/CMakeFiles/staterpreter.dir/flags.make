@@ -4,7 +4,7 @@
 # compile CXX with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/theycallmemuzz/Code/staterpreter/include/utilities -I/Users/theycallmemuzz/Code/staterpreter/include/table -I/Users/theycallmemuzz/Code/staterpreter/include/commands -I/Users/theycallmemuzz/Code/staterpreter/include/prompt -I/Users/theycallmemuzz/Code/staterpreter/include/stats -I/Users/theycallmemuzz/Code/staterpreter/include/histogram
+CXX_INCLUDES = -I/Users/theycallmemuzz/Code/stat/libs/terminal/include -I/Users/theycallmemuzz/Code/stat/libs/fileoperations/include -I/Users/theycallmemuzz/Code/stat/libs/strfmt/include -I/Users/theycallmemuzz/Code/stat/libs/table/include -I/Users/theycallmemuzz/Code/stat/libs/statistical/include -I/Users/theycallmemuzz/Code/stat/libs/histogram/include
 
 CXX_FLAGSarm64 = -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk
 

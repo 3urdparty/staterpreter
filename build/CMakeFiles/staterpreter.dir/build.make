@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/theycallmemuzz/Code/staterpreter
+CMAKE_SOURCE_DIR = /Users/theycallmemuzz/Code/statsi
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/theycallmemuzz/Code/staterpreter/build
+CMAKE_BINARY_DIR = /Users/theycallmemuzz/Code/statsi/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/staterpreter.dir/depend.make
@@ -69,37 +69,537 @@ include CMakeFiles/staterpreter.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/staterpreter.dir/flags.make
 
-CMakeFiles/staterpreter.dir/main.cpp.o: CMakeFiles/staterpreter.dir/flags.make
-CMakeFiles/staterpreter.dir/main.cpp.o: /Users/theycallmemuzz/Code/staterpreter/main.cpp
-CMakeFiles/staterpreter.dir/main.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/staterpreter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/staterpreter.dir/main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/main.cpp.o -MF CMakeFiles/staterpreter.dir/main.cpp.o.d -o CMakeFiles/staterpreter.dir/main.cpp.o -c /Users/theycallmemuzz/Code/staterpreter/main.cpp
+CMakeFiles/staterpreter.dir/src/main.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/main.cpp.o: /Users/theycallmemuzz/Code/statsi/src/main.cpp
+CMakeFiles/staterpreter.dir/src/main.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/staterpreter.dir/src/main.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/main.cpp.o -MF CMakeFiles/staterpreter.dir/src/main.cpp.o.d -o CMakeFiles/staterpreter.dir/src/main.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/main.cpp
 
-CMakeFiles/staterpreter.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/staterpreter/main.cpp > CMakeFiles/staterpreter.dir/main.cpp.i
+CMakeFiles/staterpreter.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/main.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/main.cpp > CMakeFiles/staterpreter.dir/src/main.cpp.i
 
-CMakeFiles/staterpreter.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/staterpreter/main.cpp -o CMakeFiles/staterpreter.dir/main.cpp.s
+CMakeFiles/staterpreter.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/main.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/main.cpp -o CMakeFiles/staterpreter.dir/src/main.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/addCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/addCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/addCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/addCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/addCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/addCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/addCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/addCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/addCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/addCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/addCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/addCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/addCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/addCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/addCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/addCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/addCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/cloneFileCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/cloneFileCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/cloneFileCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/cloneFileCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/cloneFileCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/cloneFileCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/cloneFileCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/cloneFileCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/cloneFileCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/cloneFileCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/cloneFileCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/cloneFileCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/cloneFileCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/cloneFileCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/cloneFileCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/cloneFileCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/cloneFileCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/columnsCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/columnsCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/columnsCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/columnsCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/columnsCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/columnsCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/columnsCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/columnsCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/columnsCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/columnsCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/columnsCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/columnsCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/columnsCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/columnsCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/columnsCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/columnsCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/columnsCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/corrCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/corrCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/corrCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/corrCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/corrCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/corrCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/corrCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/corrCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/corrCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/corrCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/corrCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/corrCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/corrCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/corrCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/corrCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/corrCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/corrCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/deleteCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/deleteCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/deleteCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/deleteCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/deleteCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/deleteCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/deleteCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/deleteCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/deleteCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/deleteCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/deleteCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/deleteCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/deleteCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/deleteCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/deleteCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/deleteCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/deleteCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/evenRowsCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/evenRowsCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/evenRowsCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/evenRowsCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/evenRowsCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/evenRowsCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/evenRowsCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/evenRowsCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/evenRowsCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/evenRowsCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/evenRowsCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/evenRowsCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/evenRowsCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/evenRowsCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/evenRowsCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/evenRowsCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/evenRowsCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/generateHTMLCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/generateHTMLCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/generateHTMLCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/generateHTMLCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/generateHTMLCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/generateHTMLCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/generateHTMLCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/generateHTMLCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/generateHTMLCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/generateHTMLCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/generateHTMLCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/generateHTMLCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/generateHTMLCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/generateHTMLCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/generateHTMLCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/generateHTMLCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/generateHTMLCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/helpCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/helpCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/helpCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/helpCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/helpCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/helpCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/helpCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/helpCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/helpCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/helpCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/helpCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/helpCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/helpCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/helpCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/helpCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/helpCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/helpCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/hhistoCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/hhistoCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/hhistoCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/hhistoCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/hhistoCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/hhistoCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/hhistoCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/hhistoCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/hhistoCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/hhistoCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/hhistoCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/hhistoCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/hhistoCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/hhistoCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/hhistoCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/hhistoCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/hhistoCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/insertRowCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/insertRowCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/insertRowCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/insertRowCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/insertRowCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/insertRowCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/insertRowCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/insertRowCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/insertRowCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/insertRowCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/insertRowCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/insertRowCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/insertRowCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/insertRowCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/insertRowCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/insertRowCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/insertRowCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/loadFileCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/loadFileCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/loadFileCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/loadFileCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/loadFileCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/loadFileCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/loadFileCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/loadFileCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/loadFileCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/loadFileCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/loadFileCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/loadFileCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/loadFileCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/loadFileCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/loadFileCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/loadFileCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/loadFileCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/manCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/manCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/manCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/manCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/manCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/manCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/manCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/manCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/manCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/manCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/manCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/manCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/manCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/manCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/manCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/manCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/manCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/maxCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/maxCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/maxCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/maxCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/maxCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/maxCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/maxCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/maxCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/maxCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/maxCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/maxCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/maxCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/maxCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/maxCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/maxCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/maxCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/maxCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/meanCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/meanCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/meanCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/meanCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/meanCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/meanCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/meanCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/meanCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/meanCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/meanCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/meanCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/meanCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/meanCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/meanCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/meanCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/meanCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/meanCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/medianCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/medianCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/medianCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/medianCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/medianCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/medianCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/medianCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/medianCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/medianCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/medianCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/medianCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/medianCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/medianCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/medianCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/medianCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/medianCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/medianCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/minCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/minCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/minCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/minCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/minCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/minCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/minCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/minCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/minCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/minCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/minCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/minCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/minCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/minCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/minCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/minCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/minCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/oddRowsCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/oddRowsCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/oddRowsCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/oddRowsCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/oddRowsCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/oddRowsCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/oddRowsCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/oddRowsCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/oddRowsCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/oddRowsCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/oddRowsCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/oddRowsCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/oddRowsCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/oddRowsCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/oddRowsCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/oddRowsCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/oddRowsCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/primesCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/primesCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/primesCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/primesCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/primesCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/primesCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/primesCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/primesCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/primesCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/primesCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/primesCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/primesCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/primesCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/primesCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/primesCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/primesCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/primesCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/regressionCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/regressionCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/regressionCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/regressionCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/regressionCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/regressionCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/regressionCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/regressionCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/regressionCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/regressionCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/regressionCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/regressionCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/regressionCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/regressionCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/regressionCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/regressionCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/regressionCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/replaceCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/replaceCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/replaceCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/replaceCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/replaceCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/replaceCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/replaceCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/replaceCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/replaceCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/replaceCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/replaceCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/replaceCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/replaceCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/replaceCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/replaceCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/replaceCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/replaceCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/reportCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/reportCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/reportCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/reportCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/reportCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/reportCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/reportCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/reportCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/reportCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/reportCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/reportCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/reportCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/reportCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/reportCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/reportCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/reportCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/reportCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/rowsCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/rowsCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/rowsCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/rowsCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/rowsCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/rowsCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/rowsCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/rowsCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/rowsCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/rowsCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/rowsCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/rowsCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/rowsCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/rowsCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/rowsCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/rowsCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/rowsCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/showCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/showCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/showCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/showCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/showCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/showCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/showCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/showCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/showCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/showCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/showCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/showCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/showCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/showCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/showCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/showCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/showCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/sortCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/sortCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/sortCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/sortCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/sortCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/sortCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/sortCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/sortCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/sortCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/sortCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/sortCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/sortCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/sortCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/sortCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/sortCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/sortCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/sortCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/stdvCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/stdvCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/stdvCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/stdvCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/stdvCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/stdvCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/stdvCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/stdvCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/stdvCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/stdvCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/stdvCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/stdvCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/stdvCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/stdvCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/stdvCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/stdvCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/stdvCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/storeFileCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/storeFileCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/storeFileCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/storeFileCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/storeFileCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/storeFileCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/storeFileCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/storeFileCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/storeFileCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/storeFileCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/storeFileCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/storeFileCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/storeFileCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/storeFileCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/storeFileCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/storeFileCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/storeFileCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/subCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/subCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/subCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/subCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/subCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/subCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/subCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/subCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/subCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/subCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/subCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/subCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/subCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/subCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/subCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/subCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/subCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/titlesCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/titlesCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/titlesCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/titlesCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/titlesCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/titlesCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/titlesCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/titlesCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/titlesCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/titlesCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/titlesCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/titlesCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/titlesCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/titlesCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/titlesCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/titlesCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/titlesCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/varianceCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/varianceCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/varianceCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/varianceCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/varianceCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/varianceCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/varianceCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/varianceCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/varianceCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/varianceCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/varianceCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/varianceCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/varianceCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/varianceCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/varianceCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/varianceCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/varianceCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/commands/vhistoCMD.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/commands/vhistoCMD.cpp.o: /Users/theycallmemuzz/Code/statsi/src/commands/vhistoCMD.cpp
+CMakeFiles/staterpreter.dir/src/commands/vhistoCMD.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/staterpreter.dir/src/commands/vhistoCMD.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/commands/vhistoCMD.cpp.o -MF CMakeFiles/staterpreter.dir/src/commands/vhistoCMD.cpp.o.d -o CMakeFiles/staterpreter.dir/src/commands/vhistoCMD.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/commands/vhistoCMD.cpp
+
+CMakeFiles/staterpreter.dir/src/commands/vhistoCMD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/commands/vhistoCMD.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/commands/vhistoCMD.cpp > CMakeFiles/staterpreter.dir/src/commands/vhistoCMD.cpp.i
+
+CMakeFiles/staterpreter.dir/src/commands/vhistoCMD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/commands/vhistoCMD.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/commands/vhistoCMD.cpp -o CMakeFiles/staterpreter.dir/src/commands/vhistoCMD.cpp.s
+
+CMakeFiles/staterpreter.dir/src/prompt/prompt.cpp.o: CMakeFiles/staterpreter.dir/flags.make
+CMakeFiles/staterpreter.dir/src/prompt/prompt.cpp.o: /Users/theycallmemuzz/Code/statsi/src/prompt/prompt.cpp
+CMakeFiles/staterpreter.dir/src/prompt/prompt.cpp.o: CMakeFiles/staterpreter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/staterpreter.dir/src/prompt/prompt.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/staterpreter.dir/src/prompt/prompt.cpp.o -MF CMakeFiles/staterpreter.dir/src/prompt/prompt.cpp.o.d -o CMakeFiles/staterpreter.dir/src/prompt/prompt.cpp.o -c /Users/theycallmemuzz/Code/statsi/src/prompt/prompt.cpp
+
+CMakeFiles/staterpreter.dir/src/prompt/prompt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/staterpreter.dir/src/prompt/prompt.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/theycallmemuzz/Code/statsi/src/prompt/prompt.cpp > CMakeFiles/staterpreter.dir/src/prompt/prompt.cpp.i
+
+CMakeFiles/staterpreter.dir/src/prompt/prompt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/staterpreter.dir/src/prompt/prompt.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/theycallmemuzz/Code/statsi/src/prompt/prompt.cpp -o CMakeFiles/staterpreter.dir/src/prompt/prompt.cpp.s
 
 # Object files for target staterpreter
 staterpreter_OBJECTS = \
-"CMakeFiles/staterpreter.dir/main.cpp.o"
+"CMakeFiles/staterpreter.dir/src/main.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/addCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/cloneFileCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/columnsCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/corrCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/deleteCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/evenRowsCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/generateHTMLCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/helpCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/hhistoCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/insertRowCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/loadFileCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/manCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/maxCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/meanCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/medianCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/minCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/oddRowsCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/primesCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/regressionCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/replaceCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/reportCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/rowsCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/showCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/sortCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/stdvCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/storeFileCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/subCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/titlesCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/varianceCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/commands/vhistoCMD.cpp.o" \
+"CMakeFiles/staterpreter.dir/src/prompt/prompt.cpp.o"
 
 # External object files for target staterpreter
 staterpreter_EXTERNAL_OBJECTS =
 
-staterpreter: CMakeFiles/staterpreter.dir/main.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/main.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/addCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/cloneFileCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/columnsCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/corrCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/deleteCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/evenRowsCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/generateHTMLCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/helpCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/hhistoCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/insertRowCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/loadFileCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/manCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/maxCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/meanCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/medianCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/minCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/oddRowsCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/primesCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/regressionCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/replaceCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/reportCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/rowsCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/showCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/sortCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/stdvCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/storeFileCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/subCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/titlesCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/varianceCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/commands/vhistoCMD.cpp.o
+staterpreter: CMakeFiles/staterpreter.dir/src/prompt/prompt.cpp.o
 staterpreter: CMakeFiles/staterpreter.dir/build.make
-staterpreter: include/utilities/libutilities.a
-staterpreter: include/table/libtable.a
-staterpreter: include/commands/libcommands.a
-staterpreter: include/prompt/libprompt.a
-staterpreter: include/stats/libstats.a
-staterpreter: include/histogram/libhistogram.a
+staterpreter: libs/terminal/libterminal.a
+staterpreter: libs/fileoperations/libfileoperations.a
+staterpreter: libs/strfmt/libstrfmt.a
+staterpreter: libs/table/libtable.a
+staterpreter: libs/statistical/libstatistical.a
+staterpreter: libs/histogram/libhistogram.a
+staterpreter: libs/terminal/libterminal.a
+staterpreter: libs/fileoperations/libfileoperations.a
+staterpreter: libs/strfmt/libstrfmt.a
+staterpreter: libs/statistical/libstatistical.a
 staterpreter: CMakeFiles/staterpreter.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/theycallmemuzz/Code/staterpreter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable staterpreter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/theycallmemuzz/Code/statsi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking CXX executable staterpreter"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/staterpreter.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -111,6 +611,6 @@ CMakeFiles/staterpreter.dir/clean:
 .PHONY : CMakeFiles/staterpreter.dir/clean
 
 CMakeFiles/staterpreter.dir/depend:
-	cd /Users/theycallmemuzz/Code/staterpreter/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/theycallmemuzz/Code/staterpreter /Users/theycallmemuzz/Code/staterpreter /Users/theycallmemuzz/Code/staterpreter/build /Users/theycallmemuzz/Code/staterpreter/build /Users/theycallmemuzz/Code/staterpreter/build/CMakeFiles/staterpreter.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/theycallmemuzz/Code/statsi/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/theycallmemuzz/Code/statsi /Users/theycallmemuzz/Code/statsi /Users/theycallmemuzz/Code/statsi/build /Users/theycallmemuzz/Code/statsi/build /Users/theycallmemuzz/Code/statsi/build/CMakeFiles/staterpreter.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/staterpreter.dir/depend
 
