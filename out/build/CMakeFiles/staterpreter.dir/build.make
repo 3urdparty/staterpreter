@@ -97,6 +97,7 @@ staterpreter: include/table/libtable.a
 staterpreter: include/commands/libcommands.a
 staterpreter: include/prompt/libprompt.a
 staterpreter: include/stats/libstats.a
+staterpreter: include/histogram/libhistogram.a
 staterpreter: CMakeFiles/staterpreter.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable staterpreter"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/staterpreter.dir/link.txt --verbose=$(VERBOSE)

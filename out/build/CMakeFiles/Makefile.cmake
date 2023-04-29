@@ -30,6 +30,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CMake.app/Contents/share/cmake-3.26/Modules/Platform/UnixPaths.cmake"
   "/Users/theycallmemuzz/Code/staterpreter/CMakeLists.txt"
   "/Users/theycallmemuzz/Code/staterpreter/include/commands/CMakeLists.txt"
+  "/Users/theycallmemuzz/Code/staterpreter/include/histogram/CMakeLists.txt"
   "/Users/theycallmemuzz/Code/staterpreter/include/prompt/CMakeLists.txt"
   "/Users/theycallmemuzz/Code/staterpreter/include/stats/CMakeLists.txt"
   "/Users/theycallmemuzz/Code/staterpreter/include/table/CMakeLists.txt"
@@ -53,6 +54,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "include/commands/CMakeFiles/CMakeDirectoryInformation.cmake"
   "include/prompt/CMakeFiles/CMakeDirectoryInformation.cmake"
   "include/stats/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "include/histogram/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -63,4 +65,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "include/commands/CMakeFiles/commands.dir/DependInfo.cmake"
   "include/prompt/CMakeFiles/prompt.dir/DependInfo.cmake"
   "include/stats/CMakeFiles/stats.dir/DependInfo.cmake"
+  "include/histogram/CMakeFiles/histogram.dir/DependInfo.cmake"
   )

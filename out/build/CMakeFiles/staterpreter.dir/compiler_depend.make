@@ -427,13 +427,13 @@ CMakeFiles/staterpreter.dir/main.cpp.o: /Users/theycallmemuzz/Code/staterpreter/
   /Users/theycallmemuzz/Code/staterpreter/include/commands/commands.hpp \
   /Users/theycallmemuzz/Code/staterpreter/include/table/table.hpp \
   /Users/theycallmemuzz/Code/staterpreter/include/table/table.hpp \
-  /Users/theycallmemuzz/Code/staterpreter/include/prompt.hpp \
+  /Users/theycallmemuzz/Code/staterpreter/include/prompt/prompt.hpp \
+  /Users/theycallmemuzz/Code/staterpreter/include/utilities/utilities.hpp \
+  /Users/theycallmemuzz/Code/staterpreter/include/histogram/histogram.hpp \
   /Users/theycallmemuzz/Code/staterpreter/include/utilities/utilities.hpp
 
 
 /Users/theycallmemuzz/Code/staterpreter/include/utilities/utilities.hpp:
-
-/Users/theycallmemuzz/Code/staterpreter/include/prompt.hpp:
 
 /Users/theycallmemuzz/Code/staterpreter/include/table/table.hpp:
 
@@ -492,6 +492,8 @@ CMakeFiles/staterpreter.dir/main.cpp.o: /Users/theycallmemuzz/Code/staterpreter/
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/count_if.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/xlocale/_string.h:
+
+/Users/theycallmemuzz/Code/staterpreter/include/histogram/histogram.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/xlocale/_stdlib.h:
 
@@ -1268,6 +1270,8 @@ CMakeFiles/staterpreter.dir/main.cpp.o: /Users/theycallmemuzz/Code/staterpreter/
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__iterator/readable_traits.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/wchar.h:
+
+/Users/theycallmemuzz/Code/staterpreter/include/prompt/prompt.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__functional/binary_function.h:
 

@@ -5,7 +5,6 @@
 #include "commands.hpp"
 
 #include "../histogram/histogram.hpp"
-
 #include "../table/table.hpp"
 #include "../utilities/utilities.hpp"
 

@@ -28,3 +28,10 @@ target_include_directories(${PROJECT_NAME} PUBLIC include/stats)
 target_link_directories(${PROJECT_NAME} PRIVATE  include/stats)
 target_link_libraries(${PROJECT_NAME} stats)
 
+
+add_subdirectory(include/histogram)
+target_include_directories(${PROJECT_NAME} PUBLIC include/histogram)
+target_link_directories(${PROJECT_NAME} PRIVATE  include/histogram)
+target_link_libraries(${PROJECT_NAME} histogram)
+
+

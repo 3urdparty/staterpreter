@@ -69,6 +69,7 @@ all: include/table/all
 all: include/commands/all
 all: include/prompt/all
 all: include/stats/all
+all: include/histogram/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -77,6 +78,7 @@ preinstall: include/table/preinstall
 preinstall: include/commands/preinstall
 preinstall: include/prompt/preinstall
 preinstall: include/stats/preinstall
+preinstall: include/histogram/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
@@ -86,6 +88,7 @@ clean: include/table/clean
 clean: include/commands/clean
 clean: include/prompt/clean
 clean: include/stats/clean
+clean: include/histogram/clean
 .PHONY : clean
 
 #=============================================================================
@@ -102,6 +105,21 @@ include/commands/preinstall:
 # Recursive "clean" directory target.
 include/commands/clean: include/commands/CMakeFiles/commands.dir/clean
 .PHONY : include/commands/clean
+
+#=============================================================================
+# Directory level rules for directory include/histogram
+
+# Recursive "all" directory target.
+include/histogram/all: include/histogram/CMakeFiles/histogram.dir/all
+.PHONY : include/histogram/all
+
+# Recursive "preinstall" directory target.
+include/histogram/preinstall:
+.PHONY : include/histogram/preinstall
+
+# Recursive "clean" directory target.
+include/histogram/clean: include/histogram/CMakeFiles/histogram.dir/clean
+.PHONY : include/histogram/clean
 
 #=============================================================================
 # Directory level rules for directory include/prompt
@@ -172,14 +190,15 @@ CMakeFiles/staterpreter.dir/all: include/table/CMakeFiles/table.dir/all
 CMakeFiles/staterpreter.dir/all: include/commands/CMakeFiles/commands.dir/all
 CMakeFiles/staterpreter.dir/all: include/prompt/CMakeFiles/prompt.dir/all
 CMakeFiles/staterpreter.dir/all: include/stats/CMakeFiles/stats.dir/all
+CMakeFiles/staterpreter.dir/all: include/histogram/CMakeFiles/histogram.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles --progress-num=32,33 "Built target staterpreter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles --progress-num=35,36 "Built target staterpreter"
 .PHONY : CMakeFiles/staterpreter.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/staterpreter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles 43
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles 46
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/staterpreter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles 0
 .PHONY : CMakeFiles/staterpreter.dir/rule
@@ -200,7 +219,7 @@ CMakeFiles/staterpreter.dir/clean:
 include/utilities/CMakeFiles/utilities.dir/all:
 	$(MAKE) $(MAKESILENT) -f include/utilities/CMakeFiles/utilities.dir/build.make include/utilities/CMakeFiles/utilities.dir/depend
 	$(MAKE) $(MAKESILENT) -f include/utilities/CMakeFiles/utilities.dir/build.make include/utilities/CMakeFiles/utilities.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles --progress-num=39,40,41,42,43 "Built target utilities"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles --progress-num=42,43,44,45,46 "Built target utilities"
 .PHONY : include/utilities/CMakeFiles/utilities.dir/all
 
 # Build rule for subdir invocation for target.
@@ -226,7 +245,7 @@ include/utilities/CMakeFiles/utilities.dir/clean:
 include/table/CMakeFiles/table.dir/all:
 	$(MAKE) $(MAKESILENT) -f include/table/CMakeFiles/table.dir/build.make include/table/CMakeFiles/table.dir/depend
 	$(MAKE) $(MAKESILENT) -f include/table/CMakeFiles/table.dir/build.make include/table/CMakeFiles/table.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles --progress-num=36,37,38 "Built target table"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles --progress-num=39,40,41 "Built target table"
 .PHONY : include/table/CMakeFiles/table.dir/all
 
 # Build rule for subdir invocation for target.
@@ -252,12 +271,12 @@ include/table/CMakeFiles/table.dir/clean:
 include/commands/CMakeFiles/commands.dir/all:
 	$(MAKE) $(MAKESILENT) -f include/commands/CMakeFiles/commands.dir/build.make include/commands/CMakeFiles/commands.dir/depend
 	$(MAKE) $(MAKESILENT) -f include/commands/CMakeFiles/commands.dir/build.make include/commands/CMakeFiles/commands.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29 "Built target commands"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30 "Built target commands"
 .PHONY : include/commands/CMakeFiles/commands.dir/all
 
 # Build rule for subdir invocation for target.
 include/commands/CMakeFiles/commands.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles 29
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles 30
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/commands/CMakeFiles/commands.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles 0
 .PHONY : include/commands/CMakeFiles/commands.dir/rule
@@ -278,7 +297,7 @@ include/commands/CMakeFiles/commands.dir/clean:
 include/prompt/CMakeFiles/prompt.dir/all:
 	$(MAKE) $(MAKESILENT) -f include/prompt/CMakeFiles/prompt.dir/build.make include/prompt/CMakeFiles/prompt.dir/depend
 	$(MAKE) $(MAKESILENT) -f include/prompt/CMakeFiles/prompt.dir/build.make include/prompt/CMakeFiles/prompt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles --progress-num=30,31 "Built target prompt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles --progress-num=33,34 "Built target prompt"
 .PHONY : include/prompt/CMakeFiles/prompt.dir/all
 
 # Build rule for subdir invocation for target.
@@ -304,7 +323,7 @@ include/prompt/CMakeFiles/prompt.dir/clean:
 include/stats/CMakeFiles/stats.dir/all:
 	$(MAKE) $(MAKESILENT) -f include/stats/CMakeFiles/stats.dir/build.make include/stats/CMakeFiles/stats.dir/depend
 	$(MAKE) $(MAKESILENT) -f include/stats/CMakeFiles/stats.dir/build.make include/stats/CMakeFiles/stats.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles --progress-num=34,35 "Built target stats"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles --progress-num=37,38 "Built target stats"
 .PHONY : include/stats/CMakeFiles/stats.dir/all
 
 # Build rule for subdir invocation for target.
@@ -322,6 +341,32 @@ stats: include/stats/CMakeFiles/stats.dir/rule
 include/stats/CMakeFiles/stats.dir/clean:
 	$(MAKE) $(MAKESILENT) -f include/stats/CMakeFiles/stats.dir/build.make include/stats/CMakeFiles/stats.dir/clean
 .PHONY : include/stats/CMakeFiles/stats.dir/clean
+
+#=============================================================================
+# Target rules for target include/histogram/CMakeFiles/histogram.dir
+
+# All Build rule for target.
+include/histogram/CMakeFiles/histogram.dir/all:
+	$(MAKE) $(MAKESILENT) -f include/histogram/CMakeFiles/histogram.dir/build.make include/histogram/CMakeFiles/histogram.dir/depend
+	$(MAKE) $(MAKESILENT) -f include/histogram/CMakeFiles/histogram.dir/build.make include/histogram/CMakeFiles/histogram.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles --progress-num=31,32 "Built target histogram"
+.PHONY : include/histogram/CMakeFiles/histogram.dir/all
+
+# Build rule for subdir invocation for target.
+include/histogram/CMakeFiles/histogram.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/histogram/CMakeFiles/histogram.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles 0
+.PHONY : include/histogram/CMakeFiles/histogram.dir/rule
+
+# Convenience name for target.
+histogram: include/histogram/CMakeFiles/histogram.dir/rule
+.PHONY : histogram
+
+# clean rule for target.
+include/histogram/CMakeFiles/histogram.dir/clean:
+	$(MAKE) $(MAKESILENT) -f include/histogram/CMakeFiles/histogram.dir/build.make include/histogram/CMakeFiles/histogram.dir/clean
+.PHONY : include/histogram/CMakeFiles/histogram.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

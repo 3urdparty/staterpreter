@@ -33,7 +33,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.26.0/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.26.0/CMakeSystem.cmake"
   "/Users/theycallmemuzz/Code/staterpreter/include/commands/CMakeLists.txt"
+  "/Users/theycallmemuzz/Code/staterpreter/include/histogram/CMakeLists.txt"
   "/Users/theycallmemuzz/Code/staterpreter/include/prompt/CMakeLists.txt"
+  "/Users/theycallmemuzz/Code/staterpreter/include/stats/CMakeLists.txt"
   "/Users/theycallmemuzz/Code/staterpreter/include/table/CMakeLists.txt"
   "/Users/theycallmemuzz/Code/staterpreter/include/utilities/CMakeLists.txt"
   )
@@ -51,6 +53,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "include/table/CMakeFiles/CMakeDirectoryInformation.cmake"
   "include/commands/CMakeFiles/CMakeDirectoryInformation.cmake"
   "include/prompt/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "include/stats/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "include/histogram/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -60,4 +64,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "include/table/CMakeFiles/table.dir/DependInfo.cmake"
   "include/commands/CMakeFiles/commands.dir/DependInfo.cmake"
   "include/prompt/CMakeFiles/prompt.dir/DependInfo.cmake"
+  "include/stats/CMakeFiles/stats.dir/DependInfo.cmake"
+  "include/histogram/CMakeFiles/histogram.dir/DependInfo.cmake"
   )

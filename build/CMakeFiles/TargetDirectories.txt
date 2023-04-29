@@ -33,3 +33,17 @@
 /Users/theycallmemuzz/Code/staterpreter/build/include/prompt/CMakeFiles/install.dir
 /Users/theycallmemuzz/Code/staterpreter/build/include/prompt/CMakeFiles/install/local.dir
 /Users/theycallmemuzz/Code/staterpreter/build/include/prompt/CMakeFiles/install/strip.dir
+/Users/theycallmemuzz/Code/staterpreter/build/include/stats/CMakeFiles/stats.dir
+/Users/theycallmemuzz/Code/staterpreter/build/include/stats/CMakeFiles/edit_cache.dir
+/Users/theycallmemuzz/Code/staterpreter/build/include/stats/CMakeFiles/rebuild_cache.dir
+/Users/theycallmemuzz/Code/staterpreter/build/include/stats/CMakeFiles/list_install_components.dir
+/Users/theycallmemuzz/Code/staterpreter/build/include/stats/CMakeFiles/install.dir
+/Users/theycallmemuzz/Code/staterpreter/build/include/stats/CMakeFiles/install/local.dir
+/Users/theycallmemuzz/Code/staterpreter/build/include/stats/CMakeFiles/install/strip.dir
+/Users/theycallmemuzz/Code/staterpreter/build/include/histogram/CMakeFiles/histogram.dir
+/Users/theycallmemuzz/Code/staterpreter/build/include/histogram/CMakeFiles/edit_cache.dir
+/Users/theycallmemuzz/Code/staterpreter/build/include/histogram/CMakeFiles/rebuild_cache.dir
+/Users/theycallmemuzz/Code/staterpreter/build/include/histogram/CMakeFiles/list_install_components.dir
+/Users/theycallmemuzz/Code/staterpreter/build/include/histogram/CMakeFiles/install.dir
+/Users/theycallmemuzz/Code/staterpreter/build/include/histogram/CMakeFiles/install/local.dir
+/Users/theycallmemuzz/Code/staterpreter/build/include/histogram/CMakeFiles/install/strip.dir

@@ -1,7 +1,7 @@
 [
 {
   "directory": "/Users/theycallmemuzz/Code/staterpreter/build",
-  "command": "/usr/bin/clang++  -I/Users/theycallmemuzz/Code/staterpreter/include/utilities -I/Users/theycallmemuzz/Code/staterpreter/include/table -I/Users/theycallmemuzz/Code/staterpreter/include/commands -I/Users/theycallmemuzz/Code/staterpreter/include/prompt -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -o CMakeFiles/staterpreter.dir/main.cpp.o -c /Users/theycallmemuzz/Code/staterpreter/main.cpp",
+  "command": "/usr/bin/clang++  -I/Users/theycallmemuzz/Code/staterpreter/include/utilities -I/Users/theycallmemuzz/Code/staterpreter/include/table -I/Users/theycallmemuzz/Code/staterpreter/include/commands -I/Users/theycallmemuzz/Code/staterpreter/include/prompt -I/Users/theycallmemuzz/Code/staterpreter/include/stats -I/Users/theycallmemuzz/Code/staterpreter/include/histogram -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -o CMakeFiles/staterpreter.dir/main.cpp.o -c /Users/theycallmemuzz/Code/staterpreter/main.cpp",
   "file": "/Users/theycallmemuzz/Code/staterpreter/main.cpp",
   "output": "CMakeFiles/staterpreter.dir/main.cpp.o"
 },
@@ -58,6 +58,12 @@
   "command": "/usr/bin/clang++   -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -o CMakeFiles/commands.dir/columnsCMD.cpp.o -c /Users/theycallmemuzz/Code/staterpreter/include/commands/columnsCMD.cpp",
   "file": "/Users/theycallmemuzz/Code/staterpreter/include/commands/columnsCMD.cpp",
   "output": "include/commands/CMakeFiles/commands.dir/columnsCMD.cpp.o"
+},
+{
+  "directory": "/Users/theycallmemuzz/Code/staterpreter/build/include/commands",
+  "command": "/usr/bin/clang++   -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -o CMakeFiles/commands.dir/sortCMD.cpp.o -c /Users/theycallmemuzz/Code/staterpreter/include/commands/sortCMD.cpp",
+  "file": "/Users/theycallmemuzz/Code/staterpreter/include/commands/sortCMD.cpp",
+  "output": "include/commands/CMakeFiles/commands.dir/sortCMD.cpp.o"
 },
 {
   "directory": "/Users/theycallmemuzz/Code/staterpreter/build/include/commands",
@@ -214,5 +220,17 @@
   "command": "/usr/bin/clang++   -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -o CMakeFiles/prompt.dir/prompt.cpp.o -c /Users/theycallmemuzz/Code/staterpreter/include/prompt/prompt.cpp",
   "file": "/Users/theycallmemuzz/Code/staterpreter/include/prompt/prompt.cpp",
   "output": "include/prompt/CMakeFiles/prompt.dir/prompt.cpp.o"
+},
+{
+  "directory": "/Users/theycallmemuzz/Code/staterpreter/build/include/stats",
+  "command": "/usr/bin/clang++   -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -o CMakeFiles/stats.dir/statfunctions.cpp.o -c /Users/theycallmemuzz/Code/staterpreter/include/stats/statfunctions.cpp",
+  "file": "/Users/theycallmemuzz/Code/staterpreter/include/stats/statfunctions.cpp",
+  "output": "include/stats/CMakeFiles/stats.dir/statfunctions.cpp.o"
+},
+{
+  "directory": "/Users/theycallmemuzz/Code/staterpreter/build/include/histogram",
+  "command": "/usr/bin/clang++   -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -o CMakeFiles/histogram.dir/histogram.cpp.o -c /Users/theycallmemuzz/Code/staterpreter/include/histogram/histogram.cpp",
+  "file": "/Users/theycallmemuzz/Code/staterpreter/include/histogram/histogram.cpp",
+  "output": "include/histogram/CMakeFiles/histogram.dir/histogram.cpp.o"
 }
 ]

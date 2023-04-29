@@ -220,6 +220,15 @@ commands_IS_TOP_LEVEL:STATIC=OFF
 commands_SOURCE_DIR:STATIC=/Users/theycallmemuzz/Code/staterpreter/include/commands
 
 //Value Computed by CMake
+histogram_BINARY_DIR:STATIC=/Users/theycallmemuzz/Code/staterpreter/out/build/include/histogram
+
+//Value Computed by CMake
+histogram_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+histogram_SOURCE_DIR:STATIC=/Users/theycallmemuzz/Code/staterpreter/include/histogram
+
+//Value Computed by CMake
 prompt_BINARY_DIR:STATIC=/Users/theycallmemuzz/Code/staterpreter/out/build/include/prompt
 
 //Value Computed by CMake
@@ -363,7 +372,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

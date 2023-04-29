@@ -2,17 +2,13 @@
 #include <iostream>
 #include <vector>
 
+#include "../histogram/histogram.hpp"
+#include "../table/table.hpp"
+#include "../utilities/utilities.hpp"
 #include "commands.hpp"
 
-#include "../histogram/histogram.hpp"
-
-#include "../table/table.hpp"
-
-#include "../utilities/utilities.hpp"
-
 using namespace std;
-void sortCMD(vector<string>& args, Table& currentTable,
-                   bool& tableLoaded) {
+void sortCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
   if (tableLoaded) {
     if (args.size() < 2) {
       cout << "Please select a column to sort table by" << endl;

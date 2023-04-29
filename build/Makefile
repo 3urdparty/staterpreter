@@ -226,6 +226,32 @@ prompt/fast:
 	$(MAKE) $(MAKESILENT) -f include/prompt/CMakeFiles/prompt.dir/build.make include/prompt/CMakeFiles/prompt.dir/build
 .PHONY : prompt/fast
 
+#=============================================================================
+# Target rules for targets named stats
+
+# Build rule for target.
+stats: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stats
+.PHONY : stats
+
+# fast build rule for target.
+stats/fast:
+	$(MAKE) $(MAKESILENT) -f include/stats/CMakeFiles/stats.dir/build.make include/stats/CMakeFiles/stats.dir/build
+.PHONY : stats/fast
+
+#=============================================================================
+# Target rules for targets named histogram
+
+# Build rule for target.
+histogram: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 histogram
+.PHONY : histogram
+
+# fast build rule for target.
+histogram/fast:
+	$(MAKE) $(MAKESILENT) -f include/histogram/CMakeFiles/histogram.dir/build.make include/histogram/CMakeFiles/histogram.dir/build
+.PHONY : histogram/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -263,8 +289,10 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... commands"
+	@echo "... histogram"
 	@echo "... prompt"
 	@echo "... staterpreter"
+	@echo "... stats"
 	@echo "... table"
 	@echo "... utilities"
 	@echo "... main.o"
