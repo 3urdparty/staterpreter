@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/theycallmemuzz/Code/StatisticalAnalysisInterpreter
+CMAKE_SOURCE_DIR = /Users/theycallmemuzz/Code/staterpreter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/theycallmemuzz/Code/StatisticalAnalysisInterpreter/out/build
+CMAKE_BINARY_DIR = /Users/theycallmemuzz/Code/staterpreter/out/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theycallmemuzz/Code/StatisticalAnalysisInterpreter/out/build/CMakeFiles /Users/theycallmemuzz/Code/StatisticalAnalysisInterpreter/out/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles /Users/theycallmemuzz/Code/staterpreter/out/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theycallmemuzz/Code/StatisticalAnalysisInterpreter/out/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/theycallmemuzz/Code/staterpreter/out/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -174,6 +174,71 @@ staterpreter/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/staterpreter.dir/build.make CMakeFiles/staterpreter.dir/build
 .PHONY : staterpreter/fast
 
+#=============================================================================
+# Target rules for targets named utilities
+
+# Build rule for target.
+utilities: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utilities
+.PHONY : utilities
+
+# fast build rule for target.
+utilities/fast:
+	$(MAKE) $(MAKESILENT) -f include/utilities/CMakeFiles/utilities.dir/build.make include/utilities/CMakeFiles/utilities.dir/build
+.PHONY : utilities/fast
+
+#=============================================================================
+# Target rules for targets named table
+
+# Build rule for target.
+table: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 table
+.PHONY : table
+
+# fast build rule for target.
+table/fast:
+	$(MAKE) $(MAKESILENT) -f include/table/CMakeFiles/table.dir/build.make include/table/CMakeFiles/table.dir/build
+.PHONY : table/fast
+
+#=============================================================================
+# Target rules for targets named commands
+
+# Build rule for target.
+commands: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 commands
+.PHONY : commands
+
+# fast build rule for target.
+commands/fast:
+	$(MAKE) $(MAKESILENT) -f include/commands/CMakeFiles/commands.dir/build.make include/commands/CMakeFiles/commands.dir/build
+.PHONY : commands/fast
+
+#=============================================================================
+# Target rules for targets named prompt
+
+# Build rule for target.
+prompt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prompt
+.PHONY : prompt
+
+# fast build rule for target.
+prompt/fast:
+	$(MAKE) $(MAKESILENT) -f include/prompt/CMakeFiles/prompt.dir/build.make include/prompt/CMakeFiles/prompt.dir/build
+.PHONY : prompt/fast
+
+#=============================================================================
+# Target rules for targets named stats
+
+# Build rule for target.
+stats: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stats
+.PHONY : stats
+
+# fast build rule for target.
+stats/fast:
+	$(MAKE) $(MAKESILENT) -f include/stats/CMakeFiles/stats.dir/build.make include/stats/CMakeFiles/stats.dir/build
+.PHONY : stats/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -210,7 +275,12 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... commands"
+	@echo "... prompt"
 	@echo "... staterpreter"
+	@echo "... stats"
+	@echo "... table"
+	@echo "... utilities"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

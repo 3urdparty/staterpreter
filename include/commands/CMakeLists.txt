@@ -1,0 +1,6 @@
+# cmake_minimum_required(VERSION 3.13.4)
+# set (CMAKE_CXX_STANDARD 11)
+project(commands)
+# set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER commands.hpp)
+set(SOURCES addCMD.cpp cloneFileCMD.cpp columnsCMD.cpp commands.hpp corrCMD.cpp deleteCMD.cpp evenRowsCMD.cpp generateHTMLCMD.cpp helpCMD.cpp hhistoCMD.cpp insertRowCMD.cpp loadFileCMD.cpp maxCMD.cpp maxCMD.cpp meanCMD.cpp medianCMD.cpp minCMD.cpp oddRowsCMD.cpp primesCMD.cpp regressionCMD.cpp replaceCMD.cpp reportCMD.cpp rowsCMD.cpp showCMD.cpp stdvCMD.cpp storeFileCMD.cpp subCMD.cpp titlesCMD.cpp varianceCMD.cpp vhistoCMD.cpp)
+add_library(${PROJECT_NAME} ${SOURCES})
