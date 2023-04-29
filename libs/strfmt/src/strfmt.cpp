@@ -39,9 +39,6 @@ vector<string> splitString(string str, char delimiter) {
     }
   }
   if (!cmpstr(buffer, "")) output.push_back(buffer);
-  for (string str : output) {
-    cout << "." << str << "." << endl;
-  }
   return output;
 }
 
