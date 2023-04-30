@@ -44,13 +44,17 @@ void parseCSV(vector<string>& content, vector<vector<string>>& csv) {
 };
 
 void writeLinesToFile(string& path, vector<string>& lines) {
-  fstream file;
-  file.open(path, ios::out);
+  ofstream file(path);
 
-  for (string line : lines) {
-    // string line = entry;
-    file << line.c_str() << endl;
-  };
+  if (file.is_open()) {
+    for (string line : lines) {
+      file << line.c_str() << endl;
+    };
+
+  } else {
+    cout << "Error opening file" << endl;
+  } 
+  file.close();
 };
 
 void copyFile(string& path1, string& path2) {

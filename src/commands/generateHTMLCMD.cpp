@@ -12,7 +12,7 @@ void generateHTMLCMD(vector<string>& args, Table& currentTable,
                      bool& tableLoaded) {
   if (args.size() == 2) {
     if (tableLoaded) {
-      string htmlPath = "html/" + args[1];
+      string htmlPath = "./html/" + args[1];
       vector<string> html = currentTable.to_html();
       writeLinesToFile(htmlPath, html);
       cout << "Ouput stored in " << colorfmt(fg::magenta) << htmlPath

@@ -88,7 +88,14 @@ ${CMD_DIR}/varianceCMD.cpp
 ${CMD_DIR}/vhistoCMD.cpp
 )
 
+set(HTML_DIR ${MAIN_SOURCE_DIR}/html)
+set(RES_DIR ${MAIN_SOURCE_DIR}/res)
+file(COPY ${RES_DIR}/file.csv
+     DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
+
+file(COPY ${HTML_DIR}
+     DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 project(${MAIN_PROJECT_NAME})
 
