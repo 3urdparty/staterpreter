@@ -3,9 +3,9 @@
 #include <fstream>
 #include <histogram/histogram.hpp>
 #include <iostream>
-#include <strfmt/strfmt.hpp>
+#include <strfmt/strfmt.hpp>  // library of simple generic functions Mustafa and Azi wrote to be used in the main program. Source code found at libs/strfmt
 #include <string>
-#include <table/table.hpp>
+#include <table/table.hpp>  // library containing a class for the Table to be used in this Program written by Mustafa
 #include <vector>
 
 #include "commands/commands.hpp"

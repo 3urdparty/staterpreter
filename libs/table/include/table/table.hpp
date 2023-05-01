@@ -1,7 +1,7 @@
 #ifndef TABLE_HPP
 #define TABLE_HPP
 
-#include <statistical/statistical.hpp>
+#include <statistical/statistical.hpp>  // library of statistical functions to be used in program written by Mubarak
 #include <string>
 #include <variant>
 #include <vector>

@@ -5,7 +5,7 @@
 #include <vector>
 
 #include <fileoperations/fileoperations.hpp>
-#include <strfmt/strfmt.hpp>
+#include <strfmt/strfmt.hpp>  // library of simple generic functions Mustafa and Azi wrote to be used in the main program. Source code found at libs/strfmt
 
 using namespace std;
 

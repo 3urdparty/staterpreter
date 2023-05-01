@@ -4,9 +4,9 @@
 #include <iostream>
 #include <string>
 
-#include <statistical/statistical.hpp>
-#include <strfmt/strfmt.hpp>
-#include <terminal/terminal.hpp>
+#include <statistical/statistical.hpp>  // library of statistical functions to be used in program written by Mubarak
+#include <strfmt/strfmt.hpp>  // library of simple generic functions Mustafa and Azi wrote to be used in the main program. Source code found at libs/strfmt
+#include <terminal/terminal.hpp>  // library of simple terminal helper functions to be used in program written by Mustafa
 using namespace std;
 
 Column::Column(string h, ValueType t) {

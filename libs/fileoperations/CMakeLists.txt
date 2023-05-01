@@ -1,3 +1,4 @@
+# CMakeLists.txt for library fileoperations
 cmake_minimum_required(VERSION 3.0.0)
 
 set(PROJECT_NAME
@@ -6,8 +7,6 @@ set(PROJECT_NAME
 set(LIBRARY_NAME
     fileoperations
 )
-
-
 
 set(LIBRARY_HEADERS_DIR
     include/${LIBRARY_NAME}
@@ -19,9 +18,6 @@ set(LIBRARY_SOURCE_DIR
     src
 )
 
-set(LIBS_DIR
-    ../
-)
 set(LIBRARY_SOURCE
     ${LIBRARY_SOURCE_DIR}/fileoperations.cpp
 )
@@ -42,7 +38,6 @@ target_include_directories(${LIBRARY_NAME} PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include>
 )
-
 
 
 target_link_libraries(${LIBRARY_NAME} strfmt)

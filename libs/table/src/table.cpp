@@ -2,13 +2,13 @@
 
 #include <iomanip>
 #include <iostream>
-#include <strfmt/strfmt.hpp>
+#include <strfmt/strfmt.hpp>  // library of simple generic functions Mustafa and Azi wrote to be used in the main program. Source code found at libs/strfmt
 #include <utility>
 #include <variant>
 
 using namespace std;
 
-#include <terminal/terminal.hpp>
+#include <terminal/terminal.hpp>  // library of simple terminal helper functions to be used in program written by Mustafa
 Table::Table(){};
 Table::Table(unsigned int col, unsigned int row) {
   columns = col;

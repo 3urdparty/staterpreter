@@ -1,22 +1,28 @@
-#include "prompt.hpp"
+#include "prompt.hpp"  // Header file for all the prompt.cpp functions  // Header file for all the prompt.cpp functions
 
 #include <unistd.h>
 
 #include <iomanip>
 #include <iostream>
+#include <strfmt/strfmt.hpp>  // library of simple generic functions Mustafa and Azi wrote to be used in the main program. Source code found at libs/strfmt
 #include <vector>
-
-#include <strfmt/strfmt.hpp>
 using namespace std;
 
 vector<string> parseArgs(string str) {
+  // Call the splitString() function from the strfmt library to split a string
+  // based on the ' ' delimiter (into different command line args)
   vector<string> args = splitString(str, ' ');
+
+  // Call function sanitizeStrings from the strfmt library
+  // That rmeoves trailing and leading whitespaces of a word
   args = sanitizeStrings(args);
-  int n = args.size();
   return args;
 }
 
 void outputBanner() {
+  // Function that outputs the `staterpreter` banner for brevity
+
+  // Outputs the banner as a Raw string
   cout << R"(      __       __                       __         
   ___/ /____ _/ /____ _______  _______ / /____ ____
  (_-< __/ _ `/ __/ -_) __/ _ \/ __/ -_) __/ -_) __/
@@ -24,17 +30,3 @@ void outputBanner() {
                        /_/                         
 )";
 };
-
-void outputLoadingIcon() {
-  std::cout << '-' << std::flush;
-  for (;;) {
-    sleep(1);
-    std::cout << "\b\\" << std::flush;
-    sleep(1);
-    std::cout << "\b|" << std::flush;
-    sleep(1);
-    std::cout << "\b/" << std::flush;
-    sleep(1);
-    std::cout << "\b-" << std::flush;
-  }
-}
