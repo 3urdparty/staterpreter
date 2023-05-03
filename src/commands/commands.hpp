@@ -3,12 +3,12 @@
 #ifndef COMMAND_HPP
 #define COMMAND_HPP
 
-#include <fileoperations/fileoperations.hpp>
-#include <histogram/histogram.hpp>
-#include <statistical/statistical.hpp>  // library of statistical functions to be used in program written by Mubarak
+#include <filuzzy/filuzzy.hpp>
+#include <histoguzzy/histoguzzy.hpp>
+#include <statsi/statsi.hpp>  // library of statistical functions to be used in program written by Mubarak
 #include <strfmt/strfmt.hpp>  // library of simple generic functions Mustafa and Azi wrote to be used in the main program. Source code found at libs/strfmt
 #include <string>
-#include <table/table.hpp>  // library containing a class for the Table to be used in this Program written by Mustafa
+#include <tabluzzy/tabluzzy.hpp>  // library containing a class for the Table to be used in this Program written by Mustafa
 using namespace std;
 
 /// @brief function for the input validation of the `clone` command.

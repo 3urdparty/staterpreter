@@ -2,11 +2,11 @@
 // This is the code responsible for
 #include <iomanip>
 #include <iostream>
-#include <statistical/statistical.hpp>  // library of statistical functions to be used in program written by Mubarak  // library of statistical functions to be used in program written by Mubarak
+#include <statsi/statsi.hpp>  // library of statistical functions to be used in program written by Mubarak  // library of statistical functions to be used in program written by Mubarak
 #include <strfmt/strfmt.hpp>  // library of simple generic functions Mustafa and Azi wrote to be used in the main program. Source code found at libs/strfmt  // library of simple generic functions Mustafa and Azi wrote to be used in the main program. Source code found at libs/strfmt
 #include <string>
-#include <table/table.hpp>  // library containing a class for the Table to be used in this Program written by Mustafa  // library containing a class for the Table to be used in this Program written by Mustafa
-#include <terminal/terminal.hpp>  // library of simple terminal helper functions to be used in program written by Mustafa  // library of simple terminal helper functions to be used in program written by Mustafa
+#include <tabluzzy/tabluzzy.hpp>  // library containing a class for the Table to be used in this Program written by Mustafa  // library containing a class for the Table to be used in this Program written by Mustafa
+#include <terminalcancer/terminalcancer.hpp>  // library of simple terminal helper functions to be used in program written by Mustafa  // library of simple terminal helper functions to be used in program written by Mustafa
 #include <vector>
 
 #include "commands.hpp"  // Header file for all the interpreter commands for staterpreter  // Header file for all the interpreter commands for staterpreter

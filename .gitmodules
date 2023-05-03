@@ -1,0 +1,18 @@
+[submodule "libs/strfmt"]
+	path = libs/strfmt
+	url = https://github.com/3urdparty/strfmt
+[submodule "libs/filuzzy"]
+	path = libs/filuzzy
+	url = https://github.com/3urdparty/filuzzy
+[submodule "libs/statsi"]
+	path = libs/statsi
+	url = https://github.com/3urdparty/statsi
+[submodule "libs/histoguzzy"]
+	path = libs/histoguzzy
+	url = https://github.com/3urdparty/histoguzzy
+[submodule "libs/tabluzzy"]
+	path = libs/tabluzzy
+	url = https://github.com/3urdparty/tabluzzy
+[submodule "libs/terminalcancer"]
+	path = libs/terminalcancer
+	url = https://github.com/3urdparty/terminalcancer
