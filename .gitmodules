@@ -1,18 +1,24 @@
 [submodule "libs/strfmt"]
 	path = libs/strfmt
 	url = https://github.com/3urdparty/strfmt
+	branch = main
 [submodule "libs/filuzzy"]
 	path = libs/filuzzy
 	url = https://github.com/3urdparty/filuzzy
+	branch = main
 [submodule "libs/statsi"]
 	path = libs/statsi
 	url = https://github.com/3urdparty/statsi
+	branch = main
 [submodule "libs/histoguzzy"]
 	path = libs/histoguzzy
 	url = https://github.com/3urdparty/histoguzzy
+	branch = main
 [submodule "libs/tabluzzy"]
 	path = libs/tabluzzy
 	url = https://github.com/3urdparty/tabluzzy
+	branch = main
 [submodule "libs/terminalcancer"]
 	path = libs/terminalcancer
 	url = https://github.com/3urdparty/terminalcancer
+	branch = main
