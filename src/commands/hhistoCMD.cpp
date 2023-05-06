@@ -15,7 +15,9 @@ void hhistoCMD(vector<string>& args, Table& currentTable,
                    bool& tableLoaded) {
   // Checks if the table has been loaded into the program
 if (tableLoaded) {
+  // if the number of arguments is smaller than 1
     if (args.size() < 2) {
+      // please enter a column
       cout << "Please enter a column to display the histogram for" << endl;
     } else if (args.size() == 2) {
       string colHeader = args[1];

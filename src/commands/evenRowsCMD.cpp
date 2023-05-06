@@ -12,24 +12,31 @@
 using namespace std;
 void evenRowsCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
   // Checks if the table has been loaded into the program
-if (tableLoaded) {
+  if (tableLoaded) {
+    // gets the number of columns and rows in table
     int columns = currentTable.getNumberOfColumns(),
         rows = currentTable.getNumberOfRows();
+
+    // gets the dimensions of the terminal
     auto [w, h] = getTerminalDimensions();
 
+    // This section of the code is responsible for drawing out the table
     cout << endl;
     cout << "+" << setfill('=') << setw(16 * columns - 1) << "" << setw(1)
          << setfill(' ') << "+" << endl;
 
     cout << "|";
 
+    // This outputs the table column headers
     for (int x = 0; x < columns; x++) {
       Column col = currentTable[x];
       cout << bold << colorfmt(fg::green) << col.getHeader() << left << setw(8)
            << "\t"
            << "\t" << clearfmt;
     };
+
     cout << "|" << endl;
+    // This is responsible for populating the table with values
     for (int y = 1; y < rows - 1; y = y + 2) {
       cout << "|";
       for (int x = 0; x < columns; x++) {
@@ -47,11 +54,14 @@ if (tableLoaded) {
       }
       cout << endl;
     };
+
+    // decorative purposes
     cout << "+" << setfill('=') << setw(16 * columns - 1) << "" << setw(1)
          << setfill(' ') << "+" << endl;
   }
 
   else {
+    // if the user has not loaded a table yet
     cout << "Please load a table first" << endl;
   }
 };
