@@ -27,7 +27,7 @@ void vhistoCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
                << "Please select another column." << endl;
         } else {
           vector<string> rawValues = col.getAllValues();
-          vector<float> y_values = convertStrToFloats(rawValues);
+          vector<float> y_values = convertToFloats(rawValues);
 
           vector<string> x_values;
           for (int x = 0; x < y_values.size(); x++) {

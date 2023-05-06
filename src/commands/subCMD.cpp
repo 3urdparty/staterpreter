@@ -46,9 +46,9 @@ void subCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
                  << clearfmt;
 
             vector<string> col1_rawValues = col1.getAllValues();
-            vector<float> col1_values = convertStrToFloats(col1_rawValues);
+            vector<float> col1_values = convertToFloats(col1_rawValues);
             vector<string> col2_rawValues = col2.getAllValues();
-            vector<float> col2_values = convertStrToFloats(col2_rawValues);
+            vector<float> col2_values = convertToFloats(col2_rawValues);
 
             float value;
             for (int y = 0; y < col1_values.size(); y++) {

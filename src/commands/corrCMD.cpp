@@ -28,9 +28,9 @@ void corrCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
                  << "Please select another column." << endl;
           } else {
             vector<string> col1_rawValues = col1.getAllValues();
-            vector<float> col1_values = convertStrToFloats(col1_rawValues);
+            vector<float> col1_values = convertToFloats(col1_rawValues);
             vector<string> col2_rawValues = col2.getAllValues();
-            vector<float> col2_values = convertStrToFloats(col2_rawValues);
+            vector<float> col2_values = convertToFloats(col2_rawValues);
 
             float r = calculateCorrelation(col1_values, col2_values);
             cout << "The Correlation for columns " << colorfmt(fg::cyan)

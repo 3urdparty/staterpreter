@@ -20,7 +20,7 @@ void regressionCMD(vector<string>& args, Table& currentTable,
         Column col1 = currentTable.getColumnByHeader(args[1]);
 
         vector<string> rawValues = col1.getAllValues();
-        vector<float> values = convertStrToFloats(rawValues);
+        vector<float> values = convertToFloats(rawValues);
 
         auto [yIntercept, b] = calculateRegression(values);
         cout << "Linear regression formula for " << colorfmt(fg::blue)
