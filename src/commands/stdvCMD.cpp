@@ -1,12 +1,12 @@
+#include <filuzzy/filuzzy.hpp>
 #include <iomanip>
 #include <iostream>
+#include <statsi/statsi.hpp>  // library of statistical functions to be used in program written by Mubarak
+#include <strfmt/strfmt.hpp>  // library of simple generic functions Mustafa and Azi wrote to be used in the main program. Source code found at libs/strfmt
+#include <tabluzzy/tabluzzy.hpp>  // library containing a class for the Table to be used in this Program written by Mustafa
 #include <vector>
 
 #include "commands.hpp"  // Header file for all the interpreter commands for staterpreter
-#include <strfmt/strfmt.hpp>  // library of simple generic functions Mustafa and Azi wrote to be used in the main program. Source code found at libs/strfmt
-#include <tabluzzy/tabluzzy.hpp>  // library containing a class for the Table to be used in this Program written by Mustafa
-#include <filuzzy/filuzzy.hpp>
-#include <statsi/statsi.hpp>  // library of statistical functions to be used in program written by Mubarak
 using namespace std;
 void stdvCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
   if (tableLoaded) {
@@ -29,7 +29,7 @@ void stdvCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
             float stdv = col.getStdDeviation();
             string columnHeader = col.getHeader();
 
-            cout << fixed << setprecision(3) << showpoint
+            cout << fixed << setprecision(4) << showpoint
                  << "The Standard deviation for column "
                  << colorfmt(fg::magenta) << colHeader << clearfmt << " is "
                  << colorfmt(fg::cyan) << bold << stdv << clearfmt << endl;
@@ -43,7 +43,9 @@ void stdvCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
         cout << "Please enter one column at a time" << endl;
       };
     } else {
-      cout << "Please load a table first" << endl;
+      cout << "Please enter one column at a time" << endl;
     }
+  } else {
+    cout << "Please load a table first" << endl;
   };
 };
