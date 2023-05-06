@@ -11,7 +11,8 @@
 
 using namespace std;
 void rowsCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
-  if (tableLoaded) {
+  // Checks if the table has been loaded into the program
+if (tableLoaded) {
     if (args.size() == 1) {
       cout << "The number of rows for this table is " << bold
            << colorfmt(fg::magenta) << currentTable.getNumberOfRows() << endl;

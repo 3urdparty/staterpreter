@@ -10,7 +10,8 @@
 #include <statsi/statsi.hpp>  // library of statistical functions to be used in program written by Mubarak
 using namespace std;
 void showCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
-  if (tableLoaded) {
+  // Checks if the table has been loaded into the program
+if (tableLoaded) {
     if (args.size() >= 2) {
       string colHeader = args[1];
       if (currentTable.columnExists(colHeader)) {

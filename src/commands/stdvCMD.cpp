@@ -9,7 +9,8 @@
 #include "commands.hpp"  // Header file for all the interpreter commands for staterpreter
 using namespace std;
 void stdvCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
-  if (tableLoaded) {
+  // Checks if the table has been loaded into the program
+if (tableLoaded) {
     if (args.size() == 1) {
       float stdv = currentTable.getStdDeviation();
       cout << fixed << setprecision(2) << showpoint

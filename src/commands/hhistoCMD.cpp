@@ -13,7 +13,8 @@
 using namespace std;
 void hhistoCMD(vector<string>& args, Table& currentTable,
                    bool& tableLoaded) {
-  if (tableLoaded) {
+  // Checks if the table has been loaded into the program
+if (tableLoaded) {
     if (args.size() < 2) {
       cout << "Please enter a column to display the histogram for" << endl;
     } else if (args.size() == 2) {

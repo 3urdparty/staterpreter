@@ -12,7 +12,8 @@
 using namespace std;
 
 void replaceCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
-  if (tableLoaded) {
+  // Checks if the table has been loaded into the program
+if (tableLoaded) {
     int cols = currentTable.getNumberOfColumns();
     if (args.size() == 3) {
       int count = 0;

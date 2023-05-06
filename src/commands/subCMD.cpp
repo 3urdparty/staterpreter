@@ -10,7 +10,8 @@
 #include "commands.hpp"  // Header file for all the interpreter commands for staterpreter
 using namespace std;
 void subCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
-  if (tableLoaded) {
+  // Checks if the table has been loaded into the program
+if (tableLoaded) {
     if (args.size() < 3) {
       cout << "Please enter two columns to be substract from one another"
            << endl;

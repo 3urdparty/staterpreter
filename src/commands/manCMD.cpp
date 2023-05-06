@@ -11,7 +11,8 @@
 
 using namespace std;
 void manCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
-  if (tableLoaded) {
+  // Checks if the table has been loaded into the program
+if (tableLoaded) {
     if (args.size() == 2) {
       string cmd = args[1];
       if (cmd == "") {

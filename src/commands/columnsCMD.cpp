@@ -14,7 +14,8 @@
 using namespace std;
 void columnsCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
   // Checks if a table is loaded in memory
-  if (tableLoaded) {
+  // Checks if the table has been loaded into the program
+if (tableLoaded) {
     // if the right number of command line args passed (1)
     if (args.size() == 1) {
       // Output the number of columns in table

@@ -11,7 +11,8 @@
 
 using namespace std;
 void minCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
-  if (tableLoaded) {
+  // Checks if the table has been loaded into the program
+if (tableLoaded) {
     if (args.size() == 1) {
       float min = currentTable.getMinimumValue();
       cout << fixed << setprecision(0) << "Minumum value is "

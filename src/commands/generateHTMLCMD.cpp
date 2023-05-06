@@ -11,7 +11,8 @@ using namespace std;
 void generateHTMLCMD(vector<string>& args, Table& currentTable,
                      bool& tableLoaded) {
   if (args.size() == 2) {
-    if (tableLoaded) {
+    // Checks if the table has been loaded into the program
+if (tableLoaded) {
       string html_path = args[1];
       if (cmpstr(splitString(html_path, '.')[1], "html")) {
         string html_path = "html/" + args[1];

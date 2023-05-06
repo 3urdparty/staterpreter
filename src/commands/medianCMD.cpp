@@ -11,7 +11,8 @@
 
 using namespace std;
 void medianCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
-  if (tableLoaded) {
+  // Checks if the table has been loaded into the program
+if (tableLoaded) {
     if (args.size() == 1) {
       float median = currentTable.getMedian();
       cout << fixed << setprecision(2) << showpoint << "The Median of the table is "

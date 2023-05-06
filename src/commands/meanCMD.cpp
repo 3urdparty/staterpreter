@@ -10,7 +10,8 @@
 
 using namespace std;
 void meanCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
-  if (tableLoaded) {
+  // Checks if the table has been loaded into the program
+if (tableLoaded) {
     if (args.size() == 1) {
       float mean = currentTable.getMean();
       cout << fixed << setprecision(0) << "The Mean of the table is "

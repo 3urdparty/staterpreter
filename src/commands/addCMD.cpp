@@ -20,7 +20,8 @@ using namespace std;
 // object, and a reference to a flag that indicates wether the table has been
 // loaded into the program or not
 void addCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
-  if (tableLoaded) {  // Checks if a table has been loaded into the program
+  // Checks if the table has been loaded into the program
+if (tableLoaded) {  // Checks if a table has been loaded into the program
                       // using the `load` command
 
     // Checks if a user has inputted less that 3 commands

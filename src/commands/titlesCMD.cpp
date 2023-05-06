@@ -11,7 +11,8 @@
 
 using namespace std;
 void titlesCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
-  if (tableLoaded) {
+  // Checks if the table has been loaded into the program
+if (tableLoaded) {
     if (args.size() == 1) {
       vector<string> headers = currentTable.getAllColumnHeaders();
       cout << "Titles: "<< bold << join(headers, ", ") << endl;

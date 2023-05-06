@@ -12,7 +12,8 @@
 
 using namespace std;
 void vhistoCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
-  if (tableLoaded) {
+  // Checks if the table has been loaded into the program
+if (tableLoaded) {
     if (args.size() < 2) {
       cout << "Please enter a column to display the vertical Histogram for"
            << endl;

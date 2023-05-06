@@ -10,7 +10,8 @@
 
 using namespace std;
 void varianceCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
-  if (tableLoaded) {
+  // Checks if the table has been loaded into the program
+if (tableLoaded) {
     if (args.size() == 1) {
       float variance = currentTable.getVariance();
       cout << fixed << setprecision(0) << "The Variance of the table is "
