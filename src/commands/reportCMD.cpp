@@ -24,7 +24,7 @@ void reportCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
     }
     // if the user has not loaded a table into memeory first
   } else {
-    // we prompt the user to load a table firstƒ
+    // we prompt the user to load a table first
     cout << "Please load a table first" << endl;
   }
 };
