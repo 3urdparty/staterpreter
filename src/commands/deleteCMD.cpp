@@ -95,7 +95,7 @@ void deleteCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
         if (args.size() == 3) {
           // we get the column header from the list of arguments
           string colHeader = args[2];
-
+          
           // if the colujmn exists in the table
           if (currentTable.columnExists(colHeader)) {
             // delete that column by its header
