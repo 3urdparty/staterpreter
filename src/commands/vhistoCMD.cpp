@@ -44,9 +44,10 @@ void vhistoCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
           // we then initialize an empty vector of string
           vector<string> x_values;
           // to store the text for each row
-          for (int x = 0; x < y_values.size(); x++) {
+          for (int x = 1; x <= y_values.size(); x++) {
             string x_val = "Row " + to_string(x);
             x_values.push_back(x_val);
+            cout << rawValues[x] << " ";
           }
           // display the vertical histogram
           displayVerticalHistogram(x_values, y_values);
