@@ -1,3 +1,4 @@
+// #include <curses.h>s
 #include <filuzzy/filuzzy.hpp>
 #include <histoguzzy/histoguzzy.hpp>
 #include <iomanip>
@@ -6,8 +7,11 @@
 #include <strfmt/strfmt.hpp>  // library of simple generic functions Mustafa and Azi wrote to be used in the main program. Source code found at libs/strfmt
 #include <tabluzzy/tabluzzy.hpp>  // library containing a class for the Table to be used in this Program written by Mustafa
 #include <vector>
+#include <terminalcancer/terminalcancer.hpp>
 
 #include "commands.hpp"  // Header file for all the interpreter commands for staterpreter
+
+
 
 using namespace std;
 void vhistoCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
@@ -50,7 +54,35 @@ void vhistoCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
             cout << rawValues[x] << " ";
           }
           // display the vertical histogram
-          displayVerticalHistogram(x_values, y_values);
+          int num_of_rows_in_page = 10;
+          int max_pages = (y_values.size() / num_of_rows_in_page) +
+                          (y_values.size() % num_of_rows_in_page == 0 ? 0 : 1);
+          int current_page = 0;
+
+          char input;
+          while (input != 'q') {
+            // char c;
+            vector<string> page_headers(
+                x_values.begin() + current_page * num_of_rows_in_page,
+                x_values.begin() + (current_page + 1) * num_of_rows_in_page);
+            vector<float> page_values(
+                y_values.begin() + current_page * num_of_rows_in_page,
+                y_values.begin() + (current_page + 1) * num_of_rows_in_page);
+            displayVerticalHistogram(page_headers, page_values);
+            cout << "[<-] previous page, [->] next page, [q] quit" << endl<< endl;
+            input = getche();
+            system("clear");
+            switch (input) {
+              case 67:
+                if (current_page < max_pages - 1) current_page++;
+                break;
+              case 68:
+                if (current_page > 0) current_page--;
+                break;
+            }
+
+            // char input = getch();
+          }
         }
         // if the column does not exist
       } else {
