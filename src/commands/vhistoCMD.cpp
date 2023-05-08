@@ -71,7 +71,8 @@ void vhistoCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
             displayVerticalHistogram(page_headers, page_values);
             cout << "[<-] previous page, [->] next page, [q] quit" << endl<< endl;
             input = getche();
-            system("clear");
+string clear_terminal = R"(printf "\33c\e[3J")";
+            system(clear_terminal);
             switch (input) {
               case 67:
                 if (current_page < max_pages - 1) current_page++;

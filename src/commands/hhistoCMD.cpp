@@ -38,9 +38,11 @@ void hhistoCMD(vector<string>& args, Table& currentTable, bool& tableLoaded) {
           vector<float> y_values = convertToFloats(rawValues);
 
           // we then initiate a vector of x_values (indices)
+          string row_header;
           vector<string> x_values;
           for (int x = 0; x < y_values.size(); x++) {
-            x_values.push_back(to_string(x));
+            row_header = "Row " + to_string(x + 1);
+            x_values.push_back(row_header);
           }
 
           // and then display the horizontal histogram using a histogram drawing
