@@ -14,10 +14,8 @@
 using namespace std;
 
 
-// Struct to store table
+
 int main(int argc, char const *argv[]) {
-  // cout << stringIsFloat("   10   ");
-  // return 0;
   Table currentTable;
   bool tableLoaded = false;
 
